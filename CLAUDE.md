@@ -58,6 +58,7 @@ output/{name}/
 | 트랙 | 순서 | 명령어 | 역할 | 독립 실행 |
 |------|------|--------|------|----------|
 | Paid | 1 | `/amm-campaign-plan` | 캠페인 전략·KPI·스프린트 기획 | 가능 |
+| Paid | 1.5 | `/amm-user-interview` | 페르소나 스폰 + 심층 인터뷰 시뮬레이션 | 가능 |
 | Paid | 2 | `/amm-copy-lmf` | LMF 4단계 소구점·카피 발굴 | 가능 |
 | Paid | 3 | `/amm-taxonomy` | 광고 네이밍 컨벤션 정의·검증 | 가능 |
 | Paid | 4 | `/amm-ad-creative` | 광고 소재 HTML → PNG 제작 | 가능 |
