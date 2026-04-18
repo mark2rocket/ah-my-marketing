@@ -1,0 +1,17 @@
+{
+  "title": "/ralph-meta 오케스트레이션 스킬 생성",
+  "stories": [
+    {
+      "id": "US-001",
+      "title": "/ralph-meta 스킬 파일 생성",
+      "passes": true,
+      "acceptanceCriteria": [
+        ".claude/skills/ralph-meta.md 파일이 존재한다",
+        "AskUserQuestion으로 클라이언트명·시작 단계를 수집하는 섹션이 있다",
+        "7단계 실행 흐름(campaign-plan~ad-analysis)이 순서대로 명시되어 있다",
+        "각 단계가 완료 후 다음 단계로 이어지는 체크포인트 구조가 있다",
+        "독립 실행(중간 단계부터 시작) 시나리오가 안내되어 있다"
+      ]
+    }
+  ]
+}
