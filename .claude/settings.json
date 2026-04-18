@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'FILE=\"$CLAUDE_TOOL_INPUT_FILE_PATH\"; if [[ \"$FILE\" == *\"/output/\"* ]]; then echo \"[GATE-5 ✅] output/ 경로 확인됨: $FILE\"; elif [[ \"$FILE\" == *\"/docs/clients/\"* && \"$FILE\" != *\"_template\"* ]]; then echo \"[GATE-5 ✅] 클라이언트 문서 경로 확인됨: $FILE\"; elif [[ \"$FILE\" == *\".claude/\"* || \"$FILE\" == *\"/docs/\"* || \"$FILE\" == \"*/CLAUDE.md\" ]]; then echo \"[GATE-5 ✅] 하네스 내부 파일: $FILE\"; else echo \"[GATE-5 ⚠️] 경고: 결과물은 output/{클라이언트}/ 에 저장하세요. 현재 경로: $FILE\"; fi'"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'FILE=\"$CLAUDE_TOOL_INPUT_FILE_PATH\"; if [[ \"$FILE\" == *\"/output/\"*\"analysis\"* || \"$FILE\" == *\"campaign-log\"* || \"$FILE\" == *\"lmf-learnings\"* ]]; then echo \"[GATE-6 ✅] Compounding 파일 업데이트됨 — 학습이 누적되고 있습니다.\"; fi'"
+          }
+        ]
+      }
+    ]
+  }
+}

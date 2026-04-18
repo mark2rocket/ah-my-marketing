@@ -1,0 +1,175 @@
+# /cardnews — 카드뉴스 기획 및 제작
+
+## 트리거
+
+`/cardnews` 또는 "카드뉴스", "카드 뉴스", "슬라이드 콘텐츠"
+
+## 역할
+
+SNS 오가닉 콘텐츠용 카드뉴스 기획(스토리보드) → HTML 렌더링 → Puppeteer 스크린샷 → PNG.
+인스타그램, 블로그, 링크드인 등 오가닉 채널 전용. 페이드 광고 소재와 별도 트랙.
+
+## Hook 게이트 (→ `.claude/hooks.md` 상세)
+
+**Pre:** GATE-1 (클라이언트 확인)
+**Post:** GATE-5 (산출물 저장 확인)
+
+## 선행 조건
+
+- `docs/clients/{name}/brand-guide.md` — 색상, 폰트, 로고 (있으면)
+- 콘텐츠 주제 또는 메시지 (Paid와 무관하게 독립 실행 가능)
+
+## Sprint Contract (시작 전 합의)
+
+스킬 실행 전 **AskUserQuestion 툴**로 아래를 순서대로 질문한다:
+
+1. "어떤 클라이언트의 카드뉴스를 제작할까요? (클라이언트명)"
+2. "카드뉴스 주제 또는 핵심 메시지를 알려주세요. (VP 코드 또는 자유 주제)"
+3. "슬라이드는 몇 장으로 구성할까요? (권장: 5~10장)"
+4. "비율을 선택해주세요. (1:1 정방형 / 4:5 세로형 / 9:16 릴스)"
+5. "브랜드 컬러를 알려주세요. (HEX 코드 — 모르면 '기본값 사용'이라고 입력)"
+6. "사용할 폰트가 있나요? (없으면 Noto Sans KR 기본 적용)"
+
+답변 확인 후 → Phase 1 (스토리보드 기획)으로 진행.
+
+## 실행 흐름
+
+### Phase 1 — 스토리보드 기획
+
+카드뉴스 구조 설계:
+
+```
+슬라이드 구조 (권장):
+1. 후킹 슬라이드 — 공감/질문/충격으로 시작
+2. 문제 제기 — 타겟의 Pain Point 직면
+3. 현재 상황 — 기존 대안의 한계
+4. 해결책 제시 — 제품/서비스 VP
+5. 증거/근거 — 수치, 후기, 사례
+6. 상세 설명 — 핵심 기능/혜택
+7. CTA — 행동 유도 (지금 시작하세요 등)
+```
+
+스토리보드 테이블:
+| 슬라이드 | 역할 | 헤드라인 | 서브텍스트 | 비주얼 방향 |
+|----------|------|----------|-----------|------------|
+| 1 | 후킹 | | | |
+
+> 헤드라인·서브텍스트 초안 완료 후 → `.claude/rules/creative-design.md` "카피 정제 필수 패스" 적용 후 Phase 2 진행.
+
+### Phase 2 — HTML 생성 (Generator)
+
+각 슬라이드를 개별 HTML 파일로 생성:
+
+```html
+<!-- 슬라이드 템플릿 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: {width}px;
+      height: {height}px;
+      background: {bg_color};
+      font-family: '{font}', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px;
+    }
+    .headline {
+      font-size: {size}px;
+      font-weight: 700;
+      color: {text_color};
+      text-align: center;
+      line-height: 1.4;
+    }
+    .sub {
+      font-size: {sub_size}px;
+      color: {sub_color};
+      margin-top: 20px;
+      text-align: center;
+    }
+    .brand-logo {
+      position: absolute;
+      bottom: 30px;
+      right: 40px;
+      font-size: 14px;
+      color: {logo_color};
+    }
+  </style>
+</head>
+<body>
+  <h1 class="headline">{헤드라인}</h1>
+  <p class="sub">{서브텍스트}</p>
+  <div class="brand-logo">{브랜드명}</div>
+</body>
+</html>
+```
+
+비율별 캔버스 크기:
+| 비율 | width | height |
+|------|-------|--------|
+| 1:1 | 1080 | 1080 |
+| 4:5 | 1080 | 1350 |
+| 9:16 | 1080 | 1920 |
+
+### Phase 3 — Puppeteer 스크린샷 (PNG 변환)
+
+```javascript
+// Puppeteer MCP로 실행
+// 각 HTML 파일을 PNG로 캡처
+
+const slides = ['slide-01.html', 'slide-02.html', ...];
+
+for (const slide of slides) {
+  await puppeteer.navigate(`file://${outputPath}/${slide}`);
+  await puppeteer.screenshot({
+    path: slide.replace('.html', '.png'),
+    clip: { x: 0, y: 0, width: 1080, height: {height} }
+  });
+}
+```
+
+### Phase 4 — 검토 및 수정
+
+생성된 PNG 검토 체크리스트:
+- [ ] 텍스트가 잘리지 않았는가?
+- [ ] 브랜드 컬러가 정확한가?
+- [ ] 폰트 가독성이 확보되었는가?
+- [ ] 이미지 내 텍스트가 20% 이하인가? (메타 정책)
+- [ ] 마지막 슬라이드에 CTA가 명확한가?
+
+## 산출물
+
+```
+output/{name}/cardnews/{소구점코드}_{YYMM}/
+├── storyboard.md              # 스토리보드
+├── html/
+│   ├── slide-01.html
+│   ├── slide-02.html
+│   └── ...
+└── png/
+    ├── slide-01.png
+    ├── slide-02.png
+    └── ...
+```
+
+## 브랜드 가이드 미제공 시 기본값
+
+```
+배경색: #FFFFFF
+텍스트 색: #1A1A1A
+강조 색: #0066FF
+폰트: Noto Sans KR (Google Fonts)
+로고 위치: 우하단
+```
+
+## 참고
+
+→ `docs/clients/{name}/brand-guide.md` (브랜드 에셋)
+→ `.claude/skills/copy-lmf.md` (소구점 및 카피)
+→ `.claude/rules/meta-ads.md` (텍스트 비율 규정)
+→ `.claude/rules/creative-design.md` (디자인 금지 목록 — 반드시 확인)
