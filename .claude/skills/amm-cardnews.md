@@ -1,8 +1,8 @@
-# /cardnews — 카드뉴스 기획 및 제작
+# /amm-cardnews — 카드뉴스 기획 및 제작
 
 ## 트리거
 
-`/cardnews` 또는 "카드뉴스", "카드 뉴스", "슬라이드 콘텐츠"
+`/amm-cardnews` 또는 "카드뉴스", "카드 뉴스", "슬라이드 콘텐츠"
 
 ## 역할
 
@@ -168,6 +168,6 @@ output/{name}/cardnews/{YYMMDD}-{주제또는VP코드}/
 ## 참고
 
 → `docs/clients/{name}/brand-guide.md` (브랜드 에셋)
-→ `.claude/skills/copy-lmf.md` (소구점 및 카피)
+→ `.claude/skills/amm-copy-lmf.md` (소구점 및 카피)
 → `.claude/rules/meta-ads.md` (텍스트 비율 규정)
 → `.claude/rules/creative-design.md` (디자인 금지 목록 — 반드시 확인)

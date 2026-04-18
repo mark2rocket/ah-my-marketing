@@ -1,8 +1,8 @@
-# /reels — 릴스 기획 및 제작
+# /amm-reels — 릴스 기획 및 제작
 
 ## 트리거
 
-`/reels` 또는 "릴스", "릴스 제작", "숏폼", "영상 콘텐츠"
+`/amm-reels` 또는 "릴스", "릴스 제작", "숏폼", "영상 콘텐츠"
 
 ## 역할
 
@@ -234,4 +234,4 @@ output/{name}/reels/{YYMMDD}-{소구점코드}/
 → `docs/clients/{name}/brand-guide.md` (브랜드 에셋)
 → `.claude/rules/creative-design.md` (디자인 금지 목록 — 반드시 확인)
 → `.claude/rules/meta-ads.md` (카피 금지 표현)
-→ `.claude/skills/copy-lmf.md` (소구점 및 카피)
+→ `.claude/skills/amm-copy-lmf.md` (소구점 및 카피)

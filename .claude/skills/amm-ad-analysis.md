@@ -1,8 +1,8 @@
-# /ad-analysis — 광고 결과 분석
+# /amm-ad-analysis — 광고 결과 분석
 
 ## 트리거
 
-`/ad-analysis` 또는 "결과 분석", "성과 분석", "캠페인 리뷰"
+`/amm-ad-analysis` 또는 "결과 분석", "성과 분석", "캠페인 리뷰"
 
 ## 역할
 
@@ -144,10 +144,10 @@ output/{name}/analysis/{YYMMDD}-analysis/
 
 ## 다음 단계
 
-→ `/campaign-plan` — 다음 스프린트 기획 (Compounding 루프 재시작)
+→ `/amm-campaign-plan` — 다음 스프린트 기획 (Compounding 루프 재시작)
 
 ## 참고
 
 → `docs/clients/{name}/campaign-log.md` (이전 캠페인 패턴)
 → `docs/lmf-learnings.md` (전체 누적 인사이트)
-→ `.claude/skills/copy-lmf.md` (다음 LMF 사이클 시작)
+→ `.claude/skills/amm-copy-lmf.md` (다음 LMF 사이클 시작)

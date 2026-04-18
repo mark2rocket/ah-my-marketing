@@ -19,12 +19,12 @@
   ❌ 클라이언트 폴더가 없습니다. 아래 순서로 진행하세요:
   Step 1. docs/clients/_template/ 폴더를 docs/clients/{name}/으로 복사
   Step 2. docs/clients/{name}/brand-guide.md 작성
-  Step 3. /taxonomy 실행 → taxonomy.md 생성
+  Step 3. /amm-taxonomy 실행 → taxonomy.md 생성
   Step 4. 원래 요청한 스킬 재시작
 ```
 
 ### GATE-2: 택소노미 선행 확인
-**적용:** `/ad-creative`, `/meta-setup`, `/ad-optimize`, `/ad-analysis`
+**적용:** `/amm-ad-creative`, `/amm-meta-setup`, `/amm-ad-optimize`, `/amm-ad-analysis`
 
 ```
 체크:
@@ -34,7 +34,7 @@
 ```
 
 ### GATE-3: LMF 브리프 선행 확인
-**적용:** `/ad-creative`, `/cardnews`
+**적용:** `/amm-ad-creative`, `/amm-cardnews`
 
 ```
 체크:
@@ -43,7 +43,7 @@
 ```
 
 ### GATE-4: Generator/Evaluator 분리 확인
-**적용:** `/copy-lmf` Phase 3 (ICE 채점) 진입 직전
+**적용:** `/amm-copy-lmf` Phase 3 (ICE 채점) 진입 직전
 
 **"세션" 정의:** 여기서 세션이란 Claude 대화 컨텍스트가 아니라
 `output/{name}/copy/copy-candidates-*.md` 파일의 물리적 저장 여부를 의미한다.
@@ -80,7 +80,7 @@
 ```
 
 ### GATE-6: Compounding 업데이트 확인
-**적용:** `/ad-analysis` 완료 직후 (강제 차단)
+**적용:** `/amm-ad-analysis` 완료 직후 (강제 차단)
 
 ```
 체크:

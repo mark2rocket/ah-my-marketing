@@ -1,14 +1,14 @@
-# /ad-optimize — 광고 최적화
+# /amm-ad-optimize — 광고 최적화
 
 ## 트리거
 
-`/ad-optimize` 또는 "광고 최적화", "캠페인 최적화", "성과 개선", "소재 교체"
+`/amm-ad-optimize` 또는 "광고 최적화", "캠페인 최적화", "성과 개선", "소재 교체"
 
 ## 역할
 
 집행 중인 메타 광고 캠페인을 실시간 데이터 기반으로 최적화한다.
 예산 배분·소재 교체·타겟 조정 등 액션 플랜을 제시한다.
-`/ad-analysis`(종료 후 전체 분석)와 달리 캠페인 **집행 중**에 실행한다.
+`/amm-ad-analysis`(종료 후 전체 분석)와 달리 캠페인 **집행 중**에 실행한다.
 
 ## Hook 게이트 (→ `.claude/hooks.md` 상세)
 
@@ -104,8 +104,8 @@ output/{name}/optimize/{YYMMDD}-optimize/
 
 ## 다음 단계
 
-→ `/ad-optimize` 재실행 (추가 최적화 회차) 또는
-→ `/ad-analysis` — 캠페인 종료 후 전체 결과 분석 + Compounding
+→ `/amm-ad-optimize` 재실행 (추가 최적화 회차) 또는
+→ `/amm-ad-analysis` — 캠페인 종료 후 전체 결과 분석 + Compounding
 
 ## 참고
 

@@ -1,8 +1,8 @@
-# /harness-review — 하네스 자기 검토 및 개선
+# /amm-harness-review — 하네스 자기 검토 및 개선
 
 ## 트리거
 
-`/harness-review` 또는 "하네스 검토", "하네스 개선", "스킬 업데이트"
+`/amm-harness-review` 또는 "하네스 검토", "하네스 개선", "스킬 업데이트"
 
 ## 역할
 

@@ -1,8 +1,8 @@
-# /blog — 블로그·뉴스레터 콘텐츠 기획 및 제작
+# /amm-blog — 블로그·뉴스레터 콘텐츠 기획 및 제작
 
 ## 트리거
 
-`/blog` 또는 "블로그", "뉴스레터", "롱폼", "아티클"
+`/amm-blog` 또는 "블로그", "뉴스레터", "롱폼", "아티클"
 
 ## 역할
 
@@ -120,4 +120,4 @@ output/{name}/blog/{YYMMDD}-{주제슬러그}/
 → `docs/clients/{name}/brand-guide.md` (브랜드 톤앤매너)
 → `docs/lmf-learnings.md` (고객 언어 소재)
 → `.claude/rules/creative-design.md` (카피 금지 목록 — 반드시 확인)
-→ `.claude/skills/copy-lmf.md` (소구점·카피 발굴)
+→ `.claude/skills/amm-copy-lmf.md` (소구점·카피 발굴)

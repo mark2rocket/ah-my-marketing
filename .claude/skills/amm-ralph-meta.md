@@ -1,8 +1,8 @@
-# /ralph-meta — 메타 광고 풀 파이프라인 실행
+# /amm-ralph-meta — 메타 광고 풀 파이프라인 실행
 
 ## 트리거
 
-`/ralph-meta` 또는 "풀 파이프라인", "처음부터 끝까지", "전체 광고 프로세스"
+`/amm-ralph-meta` 또는 "풀 파이프라인", "처음부터 끝까지", "전체 광고 프로세스"
 
 ## 역할
 
@@ -22,13 +22,13 @@ Paid Track 7단계를 처음부터 끝까지 순서대로 실행하는 오케스
 1. "어떤 클라이언트의 풀 파이프라인을 실행할까요? (클라이언트명)"
 2. "몇 단계부터 시작할까요? (1~7 선택, 또는 '처음부터')"
    ```
-   1. /campaign-plan  — 캠페인 기획
-   2. /copy-lmf       — LMF 소구점·카피 발굴
-   3. /taxonomy       — 광고 네이밍 컨벤션 정의
-   4. /ad-creative    — 광고 소재 제작
-   5. /meta-setup     — 광고 세팅 명세서
-   6. /ad-optimize    — 집행 중 최적화
-   7. /ad-analysis    — 결과 분석
+   1. /amm-campaign-plan  — 캠페인 기획
+   2. /amm-copy-lmf       — LMF 소구점·카피 발굴
+   3. /amm-taxonomy       — 광고 네이밍 컨벤션 정의
+   4. /amm-ad-creative    — 광고 소재 제작
+   5. /amm-meta-setup     — 광고 세팅 명세서
+   6. /amm-ad-optimize    — 집행 중 최적화
+   7. /amm-ad-analysis    — 결과 분석
    ```
 3. "건너뛸 단계가 있나요? (없으면 '없음')"
 
@@ -41,7 +41,7 @@ Paid Track 7단계를 처음부터 끝까지 순서대로 실행하는 오케스
 ### STEP 1 — /campaign-plan
 
 ```
-실행: .claude/skills/campaign-plan.md 전체 흐름 수행
+실행: .claude/skills/amm-campaign-plan.md 전체 흐름 수행
 산출물: output/{name}/plan/{YYMMDD}-campaign-plan/campaign-plan.md
 ```
 
@@ -53,7 +53,7 @@ Paid Track 7단계를 처음부터 끝까지 순서대로 실행하는 오케스
 ### STEP 2 — /copy-lmf
 
 ```
-실행: .claude/skills/copy-lmf.md 전체 흐름 수행
+실행: .claude/skills/amm-copy-lmf.md 전체 흐름 수행
 입력: STEP 1 산출물 (페르소나·마케팅 목표) 자동 로드
 산출물: output/{name}/copy/{YYMMDD}-lmf/
          ├── lmf-brief.md
@@ -70,7 +70,7 @@ Paid Track 7단계를 처음부터 끝까지 순서대로 실행하는 오케스
 ### STEP 3 — /taxonomy
 
 ```
-실행: .claude/skills/taxonomy.md 전체 흐름 수행
+실행: .claude/skills/amm-taxonomy.md 전체 흐름 수행
 입력: STEP 2의 VP·USP 코드 자동 로드
 산출물: docs/clients/{name}/taxonomy.md
         docs/clients/{name}/taxonomy-log.csv
@@ -84,7 +84,7 @@ Paid Track 7단계를 처음부터 끝까지 순서대로 실행하는 오케스
 ### STEP 4 — /ad-creative
 
 ```
-실행: .claude/skills/ad-creative.md 전체 흐름 수행
+실행: .claude/skills/amm-ad-creative.md 전체 흐름 수행
 입력: STEP 2 copy-final.md + STEP 3 taxonomy.md 자동 로드
 산출물: output/{name}/creative/{YYMMDD}-{VP코드}/
          ├── *.html
@@ -99,7 +99,7 @@ Paid Track 7단계를 처음부터 끝까지 순서대로 실행하는 오케스
 ### STEP 5 — /meta-setup
 
 ```
-실행: .claude/skills/meta-setup.md 전체 흐름 수행
+실행: .claude/skills/amm-meta-setup.md 전체 흐름 수행
 입력: STEP 3 taxonomy.md + STEP 4 소재 파일명 자동 로드
 산출물: output/{name}/setup/{YYMMDD}-meta-setup/meta-setup.md
 ```
@@ -112,7 +112,7 @@ Paid Track 7단계를 처음부터 끝까지 순서대로 실행하는 오케스
 ### STEP 6 — /ad-optimize
 
 ```
-실행: .claude/skills/ad-optimize.md 전체 흐름 수행
+실행: .claude/skills/amm-ad-optimize.md 전체 흐름 수행
 입력: STEP 5 세팅 명세서 + 실시간 성과 데이터 (사용자 제공)
 산출물: output/{name}/optimize/{YYMMDD}-optimize/optimize-plan.md
 ```
@@ -127,7 +127,7 @@ Paid Track 7단계를 처음부터 끝까지 순서대로 실행하는 오케스
 ### STEP 7 — /ad-analysis
 
 ```
-실행: .claude/skills/ad-analysis.md 전체 흐름 수행
+실행: .claude/skills/amm-ad-analysis.md 전체 흐름 수행
 입력: 전체 캠페인 성과 데이터 (사용자 제공)
 산출물: output/{name}/analysis/{YYMMDD}-analysis/analysis.md
         docs/clients/{name}/campaign-log.md (append)
@@ -144,7 +144,7 @@ Paid Track 7단계를 처음부터 끝까지 순서대로 실행하는 오케스
 파이프라인 실행 중 현재 상태를 아래 형식으로 출력한다:
 
 ```
-[/ralph-meta 진행 현황] 클라이언트: {name}
+[/amm-ralph-meta 진행 현황] 클라이언트: {name}
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
  1. campaign-plan  ✅ 완료
  2. copy-lmf       ✅ 완료

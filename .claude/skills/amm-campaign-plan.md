@@ -1,8 +1,8 @@
-# /campaign-plan — 마케팅 캠페인 기획
+# /amm-campaign-plan — 마케팅 캠페인 기획
 
 ## 트리거
 
-`/campaign-plan` 또는 "캠페인 기획", "마케팅 플래닝", "캠페인 플랜"
+`/amm-campaign-plan` 또는 "캠페인 기획", "마케팅 플래닝", "캠페인 플랜"
 
 ## 역할
 
@@ -71,7 +71,7 @@ MKT목표·CPG목표 코드 확정 후 아래를 정의한다:
 | P1 | | | | |
 | P2 | | | | |
 
-> 이 페르소나는 `/copy-lmf` Phase 1에서 구체화된다.
+> 이 페르소나는 `/amm-copy-lmf` Phase 1에서 구체화된다.
 
 ### Phase 3 — KPI 및 성공 기준
 
@@ -100,7 +100,7 @@ output/{name}/plan/{YYMMDD}-campaign-plan/
 
 ## 다음 단계
 
-→ `/copy-lmf` — 페르소나 기반 소구점·카피 발굴 (LMF 4단계)
+→ `/amm-copy-lmf` — 페르소나 기반 소구점·카피 발굴 (LMF 4단계)
 
 ## 참고
 

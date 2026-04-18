@@ -1,8 +1,8 @@
-# /meta-setup — 메타 광고 세팅 파이프라인
+# /amm-meta-setup — 메타 광고 세팅 파이프라인
 
 ## 트리거
 
-`/meta-setup` 또는 "광고 세팅", "캠페인 설계", "메타 광고 세팅"
+`/amm-meta-setup` 또는 "광고 세팅", "캠페인 설계", "메타 광고 세팅"
 
 ## 역할
 
@@ -16,9 +16,9 @@
 
 ## 선행 조건
 
-- `/taxonomy` 완료 → `docs/clients/{name}/taxonomy.md` 존재
-- `/copy-lmf` 완료 → VP 코드 + 카피 확정
-- `/ad-creative` 완료 → 소재 파일명 확정 (세팅 명세서에 기재)
+- `/amm-taxonomy` 완료 → `docs/clients/{name}/taxonomy.md` 존재
+- `/amm-copy-lmf` 완료 → VP 코드 + 카피 확정
+- `/amm-ad-creative` 완료 → 소재 파일명 확정 (세팅 명세서에 기재)
 
 ## Sprint Contract (시작 전 합의)
 
@@ -98,10 +98,10 @@ output/{name}/setup/{YYMMDD}-meta-setup/
 
 ## 다음 단계
 
-→ `/ad-optimize` — 광고 집행 중 성과 최적화
+→ `/amm-ad-optimize` — 광고 집행 중 성과 최적화
 
 ## 참고
 
 → `docs/clients/{name}/taxonomy.md` (소구점 코드)
 → `.claude/rules/meta-ads.md` (메타 광고 공통 규칙)
-→ `.claude/skills/copy-lmf.md` (카피 발굴)
+→ `.claude/skills/amm-copy-lmf.md` (카피 발굴)
