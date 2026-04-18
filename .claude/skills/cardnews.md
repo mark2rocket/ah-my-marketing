@@ -145,16 +145,14 @@ for (const slide of slides) {
 ## 산출물
 
 ```
-output/{name}/cardnews/{소구점코드}_{YYMM}/
-├── storyboard.md              # 스토리보드
+output/{name}/cardnews/{YYMMDD}-{주제또는VP코드}/
+├── storyboard.md
 ├── html/
 │   ├── slide-01.html
-│   ├── slide-02.html
-│   └── ...
+│   └── slide-02.html
 └── png/
     ├── slide-01.png
-    ├── slide-02.png
-    └── ...
+    └── slide-02.png
 ```
 
 ## 브랜드 가이드 미제공 시 기본값

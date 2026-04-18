@@ -89,6 +89,17 @@
 - [ ] 캠페인 off 기준 설정
 - [ ] 최소 운영 기간 설정 (데이터 수집 기간)
 
+## 산출물
+
+```
+output/{name}/setup/{YYMMDD}-meta-setup/
+└── meta-setup.md
+```
+
+## 다음 단계
+
+→ `/ad-optimize` — 광고 집행 중 성과 최적화
+
 ## 참고
 
 → `docs/clients/{name}/taxonomy.md` (소구점 코드)

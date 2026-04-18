@@ -7,7 +7,8 @@
 ## 역할
 
 클라이언트의 메타 광고 네이밍 컨벤션을 정의하고, 기존 광고명을 검증·수정한다.
-모든 다른 스킬(`/meta-setup`, `/copy-lmf`, `/cardnews`)의 기반이 되는 선행 스킬.
+`/copy-lmf`에서 확정된 VP·USP 코드를 받아 네이밍 체계에 반영하는 것이 권장 순서.
+독립 실행 시에는 VP·USP를 직접 정의한다.
 
 ## Hook 게이트 (→ `.claude/hooks.md` 상세)
 
@@ -95,7 +96,12 @@
 ## 산출물
 
 - `docs/clients/{name}/taxonomy.md` (생성/업데이트)
+- `docs/clients/{name}/taxonomy-log.csv` (초기화 또는 업데이트)
 - 검증 리포트 (인라인 출력)
+
+## 다음 단계
+
+→ `/ad-creative` — 확정된 택소노미 기준으로 광고 소재 제작
 
 ## 참고
 

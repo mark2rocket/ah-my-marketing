@@ -215,10 +215,17 @@ Session B (Evaluator):
 
 ## 산출물
 
-- `output/{name}/copy/lmf-brief-{YYMM}.md` — LMF 브리프 (퍼소나+VP+소구점)
-- `output/{name}/copy/copy-candidates-{YYMM}.md` — 카피 후보 전체 목록
-- `output/{name}/copy/ice-priority-{YYMM}.md` — ICE 우선순위 채점표
-- `output/{name}/copy/copy-final-{YYMM}.md` — 최종 선별 카피
+```
+output/{name}/copy/{YYMMDD}-lmf/
+├── lmf-brief.md          — LMF 브리프 (퍼소나+VP+소구점)
+├── copy-candidates.md    — 카피 후보 전체 목록
+├── ice-priority.md       — ICE 우선순위 채점표
+└── copy-final.md         — 최종 선별 카피
+```
+
+## 다음 단계
+
+→ `/taxonomy` — 확정된 VP·USP 코드 기반 광고 네이밍 컨벤션 정의
 
 ## 참고
 

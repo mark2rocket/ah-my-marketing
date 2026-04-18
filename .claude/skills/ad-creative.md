@@ -134,12 +134,16 @@ await puppeteer.screenshot({
 ## 산출물
 
 ```
-output/{name}/creative/{VP코드}_{YYMM}/
-├── {브랜드}_{목표}_{YYMM}_{VP코드}_IMG1x1_v1.html
-├── {브랜드}_{목표}_{YYMM}_{VP코드}_IMG1x1_v1.png
-├── {브랜드}_{목표}_{YYMM}_{VP코드}_IMG4x5_v1.html
-└── {브랜드}_{목표}_{YYMM}_{VP코드}_IMG4x5_v1.png
+output/{name}/creative/{YYMMDD}-{VP코드}/
+├── {택소노미광고명}_IMG1x1_v01.html
+├── {택소노미광고명}_IMG1x1_v01.png
+├── {택소노미광고명}_IMG4x5_v01.html
+└── {택소노미광고명}_IMG4x5_v01.png
 ```
+
+## 다음 단계
+
+→ `/meta-setup` — 제작된 소재 파일명 기반 광고 세팅 명세서 작성
 
 ## 참고
 

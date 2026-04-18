@@ -134,9 +134,17 @@ winner 소구점 / 지표 / 배운 것 / 다음 가설 / 고객 언어 발굴
 
 ## 산출물
 
-- `output/{name}/reports/analysis-{YYMM}.md` — 상세 분석 리포트
+```
+output/{name}/analysis/{YYMMDD}-analysis/
+└── analysis.md           — 상세 분석 리포트
+```
+
 - `docs/clients/{name}/campaign-log.md` 업데이트 (append)
 - `docs/lmf-learnings.md` 업데이트 (append)
+
+## 다음 단계
+
+→ `/campaign-plan` — 다음 스프린트 기획 (Compounding 루프 재시작)
 
 ## 참고
 
