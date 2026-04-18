@@ -24,7 +24,7 @@
 ```
 
 ### GATE-2: 택소노미 선행 확인
-**적용:** `/meta-setup`, `/copy-lmf`, `/cardnews`
+**적용:** `/ad-creative`, `/meta-setup`, `/ad-optimize`, `/ad-analysis`
 
 ```
 체크:
@@ -34,7 +34,7 @@
 ```
 
 ### GATE-3: LMF 브리프 선행 확인
-**적용:** `/cardnews`
+**적용:** `/ad-creative`, `/cardnews`
 
 ```
 체크:
