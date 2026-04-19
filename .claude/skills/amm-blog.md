@@ -26,11 +26,12 @@ SNS 오가닉 채널용 블로그·뉴스레터 콘텐츠를 기획하고 초안
 스킬 실행 전 **AskUserQuestion 툴**로 아래를 순서대로 질문한다:
 
 1. "어떤 클라이언트의 블로그/뉴스레터를 작성할까요? (클라이언트명)"
-2. "콘텐츠 주제 또는 핵심 메시지를 알려주세요."
-3. "채널을 선택해주세요. (인스타 블로그 / 브런치 / 서브스택 / 자사 블로그 / 뉴스레터)"
-4. "목표 분량은? (짧게 800자 / 보통 1500자 / 길게 3000자+)"
-5. "타겟 독자는 누구인가요? (페르소나 코드 또는 자유 기술)"
-6. "참고할 소재가 있나요? (데이터, 사례, 경험담 — 없으면 '없음')"
+2. "광고 계정명을 알려주세요. (예: main / kr-performance / default)"
+3. "콘텐츠 주제 또는 핵심 메시지를 알려주세요."
+4. "채널을 선택해주세요. (인스타 블로그 / 브런치 / 서브스택 / 자사 블로그 / 뉴스레터)"
+5. "목표 분량은? (짧게 800자 / 보통 1500자 / 길게 3000자+)"
+6. "타겟 독자는 누구인가요? (페르소나 코드 또는 자유 기술)"
+7. "참고할 소재가 있나요? (데이터, 사례, 경험담 — 없으면 '없음')"
 
 답변 확인 후 → Phase 0으로 진행.
 
@@ -39,7 +40,7 @@ SNS 오가닉 채널용 블로그·뉴스레터 콘텐츠를 기획하고 초안
 ### Phase 0 — 이전 인사이트 로드
 
 ```
-1. docs/lmf-learnings.md 읽기 (있으면)
+1. docs/clients/{name}/accounts/{account}/lmf-learnings.md 읽기 (있으면)
    → 고객 언어·winner 소구점 중 이번 주제와 연결할 수 있는 것 파악
 
 2. docs/clients/{name}/brand-guide.md 읽기 (있으면)
@@ -110,7 +111,7 @@ SNS 오가닉 채널용 블로그·뉴스레터 콘텐츠를 기획하고 초안
 ## 산출물
 
 ```
-output/{name}/blog/{YYMMDD}-{주제슬러그}/
+output/{name}/{account}/blog/{YYMMDD}-{주제슬러그}/
 ├── outline.md          — 목차·구조 설계
 └── blog-draft.md       — 정제 완료 초안 (발행 직전 상태)
 ```
@@ -118,6 +119,6 @@ output/{name}/blog/{YYMMDD}-{주제슬러그}/
 ## 참고
 
 → `docs/clients/{name}/brand-guide.md` (브랜드 톤앤매너)
-→ `docs/lmf-learnings.md` (고객 언어 소재)
+→ `docs/clients/{name}/accounts/{account}/lmf-learnings.md` (고객 언어 소재)
 → `.claude/rules/creative-design.md` (카피 금지 목록 — 반드시 확인)
 → `.claude/skills/amm-copy-lmf.md` (소구점·카피 발굴)

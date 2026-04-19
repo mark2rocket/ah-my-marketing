@@ -18,17 +18,18 @@
 ## 독립 실행
 
 선행 스킬 없이 독립 실행 가능.
-`output/{name}/setup/` 산출물이 있으면 자동 로드하여 세팅 맥락을 파악한다.
+`output/{name}/{account}/setup/` 산출물이 있으면 자동 로드하여 세팅 맥락을 파악한다.
 
 ## Sprint Contract (시작 전 합의)
 
 스킬 실행 전 **AskUserQuestion 툴**로 아래를 순서대로 질문한다:
 
 1. "어떤 클라이언트의 캠페인을 최적화할까요? (클라이언트명)"
-2. "현재 집행 중인 캠페인명을 알려주세요. (택소노미 기준, 예: ACQ_AC_MYSVC_S01_260419)"
-3. "집행 시작일과 현재까지 경과 기간은? (예: 2026-04-19 시작, 7일 경과)"
-4. "현재 가장 큰 문제는? (예산 소진 과다 / CTR 저조 / CPA 높음 / 특정 소재 부진 / 기타)"
-5. "최근 성과 데이터를 붙여넣어 주세요. (VP별 또는 광고세트별 CTR·CPA·지출 등)"
+2. "광고 계정명을 알려주세요. (예: main / kr-performance / default)"
+3. "현재 집행 중인 캠페인명을 알려주세요. (택소노미 기준, 예: ACQ_AC_MYSVC_S01_260419)"
+4. "집행 시작일과 현재까지 경과 기간은? (예: 2026-04-19 시작, 7일 경과)"
+5. "현재 가장 큰 문제는? (예산 소진 과다 / CTR 저조 / CPA 높음 / 특정 소재 부진 / 기타)"
+6. "최근 성과 데이터를 붙여넣어 주세요. (VP별 또는 광고세트별 CTR·CPA·지출 등)"
 
 답변 확인 후 → Phase 0으로 진행.
 
@@ -37,15 +38,15 @@
 ### Phase 0 — 맥락 로드
 
 ```
-1. output/{name}/setup/ 폴더에서 날짜순 최신 폴더 자동 발견
+1. output/{name}/{account}/setup/ 폴더에서 날짜순 최신 폴더 자동 발견
    → 찾으면: meta-setup.md 읽기 → 캠페인 구조·소구점 배분·소재 목록 파악
    → 없으면: "세팅 명세서 없음. 사용자 입력 기반으로 진행."
 
-2. docs/clients/{name}/campaign-log.md 읽기 (있으면)
+2. docs/clients/{name}/accounts/{account}/campaign-log.md 읽기 (있으면)
    → 이전 최적화 이력 · 반복 문제 패턴
    → 없으면: 이번 회차가 첫 최적화 기록
 
-3. docs/clients/{name}/taxonomy.md 읽기 (있으면)
+3. docs/clients/{name}/accounts/{account}/taxonomy.md 읽기 (있으면)
    → VP 코드 · USP 매핑
 
 4. 자동 로드 결과 출력:
@@ -90,7 +91,7 @@
 
 ### Phase 4 — 중간 인사이트 기록
 
-`docs/clients/{name}/campaign-log.md`에 append:
+`docs/clients/{name}/accounts/{account}/campaign-log.md`에 append:
 
 ```markdown
 ### [{날짜}] {캠페인명} — 최적화 #{N}회차
@@ -103,7 +104,7 @@
 ## 산출물
 
 ```
-output/{name}/optimize/{YYMMDD}-optimize/
+output/{name}/{account}/optimize/{YYMMDD}-optimize/
 └── optimize-plan.md
 ```
 
@@ -114,6 +115,6 @@ output/{name}/optimize/{YYMMDD}-optimize/
 
 ## 참고
 
-→ `docs/clients/{name}/taxonomy.md` (VP 코드 매핑)
-→ `docs/clients/{name}/campaign-log.md` (이전 최적화 이력)
+→ `docs/clients/{name}/accounts/{account}/taxonomy.md` (VP 코드 매핑)
+→ `docs/clients/{name}/accounts/{account}/campaign-log.md` (이전 최적화 이력)
 → `.claude/rules/meta-ads.md` (메타 광고 공통 규칙)

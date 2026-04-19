@@ -1,7 +1,7 @@
 {
   "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"git status && git diff\",\"description\":\"Check git status and diff\"}",
-  "error": "Exit code 128\nfatal: (현재 폴더 또는 상위 폴더 중 일부가) 깃 저장소가 아닙니다: .git",
-  "timestamp": "2026-04-18T17:00:26.702Z",
+  "tool_input_preview": "{\"command\":\"git add README.md && git commit -m \\\"docs: 리포지토리 타이틀 변경 — 한국의 마케터를 위한 마케팅 하네스\\\" && git push && gh repo edit ah-my-marketing --description \\\"한국의 마케터를 위한 마케팅 하네스 — Claude Code 기반 AI-Native 마...",
+  "error": "Exit code 1\n[master 0073448] docs: 리포지토리 타이틀 변경 — 한국의 마케터를 위한 마케팅 하네스\n 1 file changed, 2 insertions(+), 2 deletions(-)\nTo https://github.com/mark2rocket/ah-my-marketing.git\n   0e168fc..0073448  master -> master\nexpected the \"[HOST/]OWNER/REPO\" format, got \"ah-my-marketing\"",
+  "timestamp": "2026-04-19T05:27:10.363Z",
   "retry_count": 2
 }

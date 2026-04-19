@@ -24,10 +24,11 @@ Generator/Evaluator 분리 원칙 적용.
 스킬 실행 전 **AskUserQuestion 툴**로 아래를 순서대로 질문한다:
 
 1. "어떤 클라이언트의 훅 문구를 발산할까요? (클라이언트명)"
-2. "발산할 소구점을 알려주세요. (VP 코드 또는 핵심 메시지 한 줄)"
-3. "타겟 페르소나는? (P 코드 또는 자유 기술)"
-4. "사용할 채널은? (메타 광고 / 릴스 / 카드뉴스 / 블로그 / 전체)"
-5. "목표 훅 개수는? (기본: 30개 / 많이: 60개 / 집중: 10개 심화)"
+2. "광고 계정명을 알려주세요. (예: main / kr-performance / default)"
+3. "발산할 소구점을 알려주세요. (VP 코드 또는 핵심 메시지 한 줄)"
+4. "타겟 페르소나는? (P 코드 또는 자유 기술)"
+5. "사용할 채널은? (메타 광고 / 릴스 / 카드뉴스 / 블로그 / 전체)"
+6. "목표 훅 개수는? (기본: 30개 / 많이: 60개 / 집중: 10개 심화)"
 
 답변 확인 후 → Phase 1 (Generator)으로 진행.
 
@@ -94,7 +95,7 @@ ICE 점수 상위 10개를 채널별로 매핑:
 ## 산출물
 
 ```
-output/{name}/copy/{YYMMDD}-hook-lab/
+output/{name}/{account}/copy/{YYMMDD}-hook-lab/
 ├── hook-candidates.md   — 전체 발산 목록 (정제 완료)
 └── hook-top10.md        — ICE 채점 + Top 10 + 채널 매핑
 ```
@@ -106,6 +107,6 @@ output/{name}/copy/{YYMMDD}-hook-lab/
 
 ## 참고
 
-→ `docs/clients/{name}/taxonomy.md` (VP·USP 코드)
+→ `docs/clients/{name}/accounts/{account}/taxonomy.md` (VP·USP 코드)
 → `.claude/rules/creative-design.md` (카피 정제 필수 패스)
 → `.claude/rules/meta-ads.md` (금지 표현)

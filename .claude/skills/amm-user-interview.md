@@ -25,10 +25,11 @@
 스킬 실행 전 **AskUserQuestion 툴**로 아래를 순서대로 질문한다:
 
 1. "어떤 클라이언트의 유저 인터뷰를 진행할까요? (클라이언트명)"
-2. "인터뷰 대상 제품/서비스/캠페인을 설명해주세요. (한 문단 자유 기술)"
-3. "핵심 가설이 있나요? (예: '가격이 주요 구매 장벽일 것이다' — 없으면 '없음')"
-4. "기존에 정의된 페르소나가 있나요? (있으면 붙여넣기, 없으면 AI가 생성)"
-5. "인터뷰에서 특히 파고들고 싶은 주제가 있나요? (예: 이탈 이유, 가격 저항, 경쟁 대안)"
+2. "광고 계정명을 알려주세요. (예: main / kr-performance / default)"
+3. "인터뷰 대상 제품/서비스/캠페인을 설명해주세요. (한 문단 자유 기술)"
+4. "핵심 가설이 있나요? (예: '가격이 주요 구매 장벽일 것이다' — 없으면 '없음')"
+5. "기존에 정의된 페르소나가 있나요? (있으면 붙여넣기, 없으면 AI가 생성)"
+6. "인터뷰에서 특히 파고들고 싶은 주제가 있나요? (예: 이탈 이유, 가격 저항, 경쟁 대안)"
 
 답변 확인 후 → Phase 0으로 진행.
 
@@ -37,11 +38,11 @@
 ### Phase 0 — 컨텍스트 로드
 
 ```
-1. output/{name}/plan/ 폴더 날짜순 최신 campaign-plan.md 자동 발견
+1. output/{name}/{account}/plan/ 폴더 날짜순 최신 campaign-plan.md 자동 발견
    → 찾으면: 마케팅 목표·타겟·KPI 파악
-   → 없으면: Sprint Contract 1~2번 답변으로 대체
+   → 없으면: Sprint Contract 1~3번 답변으로 대체
 
-2. output/{name}/copy/ 폴더에서 3단계 폴백으로 VP·소구점 가설 로드:
+2. output/{name}/{account}/copy/ 폴더에서 3단계 폴백으로 VP·소구점 가설 로드:
    a. 날짜순 최신 lmf-brief.md 탐색
    b. 없으면 copy-final.md 탐색
    c. 둘 다 없으면: "기존 VP 정보 없음. 인터뷰 결과로 최초 가설을 수립합니다."
@@ -169,7 +170,7 @@ P-A: ...
 ## 산출물
 
 ```
-output/{name}/research/{YYMMDD}-user-interview/
+output/{name}/{account}/research/{YYMMDD}-user-interview/
 ├── personas.md        — 페르소나 프로필 3개
 ├── interview-log.md   — 심층 인터뷰 대본 전문
 └── insights.md        — 인사이트 요약 + 고객 언어 발굴
@@ -181,6 +182,6 @@ output/{name}/research/{YYMMDD}-user-interview/
 
 ## 참고
 
-→ `output/{name}/plan/` (캠페인 기획 컨텍스트)
-→ `output/{name}/copy/lmf-brief.md` (기존 VP 가설)
+→ `output/{name}/{account}/plan/` (캠페인 기획 컨텍스트)
+→ `output/{name}/{account}/copy/lmf-brief.md` (기존 VP 가설)
 → `.claude/rules/meta-ads.md` (LMF 카피 방향)

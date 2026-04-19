@@ -24,12 +24,13 @@ LMF 캠페인 실행 전 전체 마케팅 전략을 수립한다.
 스킬 실행 전 **AskUserQuestion 툴**로 아래를 순서대로 질문한다:
 
 1. "어떤 클라이언트의 캠페인을 기획할까요? (클라이언트명)"
-2. "제품/서비스를 한 줄로 설명해주세요."
-3. "이번 캠페인의 마케팅 목표는? (ACQ 신규획득 / RET 리텐션 / REV 매출 / BRD 브랜딩)"
-4. "총 예산과 집행 기간을 알려주세요. (예: 500만원 / 1개월)"
-5. "주요 타겟을 알려주세요. (성별, 연령대, 직업, 관심사 등 자유롭게)"
-6. "가장 중요한 지표(Primary Metric)는? (CPI / CPA / ROAS / CTR / LD 등)"
-7. "참고할 경쟁 브랜드나 레퍼런스 광고가 있나요? (없으면 '없음')"
+2. "광고 계정명을 알려주세요. (예: main / kr-performance / default)"
+3. "제품/서비스를 한 줄로 설명해주세요."
+4. "이번 캠페인의 마케팅 목표는? (ACQ 신규획득 / RET 리텐션 / REV 매출 / BRD 브랜딩)"
+5. "총 예산과 집행 기간을 알려주세요. (예: 500만원 / 1개월)"
+6. "주요 타겟을 알려주세요. (성별, 연령대, 직업, 관심사 등 자유롭게)"
+7. "가장 중요한 지표(Primary Metric)는? (CPI / CPA / ROAS / CTR / LD 등)"
+8. "참고할 경쟁 브랜드나 레퍼런스 광고가 있나요? (없으면 '없음')"
 
 답변 확인 후 → Phase 0으로 진행.
 
@@ -38,10 +39,10 @@ LMF 캠페인 실행 전 전체 마케팅 전략을 수립한다.
 ### Phase 0 — 이전 인사이트 로드
 
 ```
-1. docs/lmf-learnings.md 읽기 (있으면)
+1. docs/clients/{name}/accounts/{account}/lmf-learnings.md 읽기 (있으면)
    → 이전 winner 소구점, 반복 실패 패턴 파악
 
-2. docs/clients/{name}/campaign-log.md 읽기 (있으면)
+2. docs/clients/{name}/accounts/{account}/campaign-log.md 읽기 (있으면)
    → 직전 캠페인 결과 · 검증된 가설 파악
 
 3. docs/clients/{name}/brand-guide.md 읽기 (있으면)
@@ -94,7 +95,7 @@ MKT목표·CPG목표 코드 확정 후 아래를 정의한다:
 ## 산출물
 
 ```
-output/{name}/plan/{YYMMDD}-campaign-plan/
+output/{name}/{account}/plan/{YYMMDD}-campaign-plan/
 └── campaign-plan.md
 ```
 
@@ -105,5 +106,5 @@ output/{name}/plan/{YYMMDD}-campaign-plan/
 ## 참고
 
 → `docs/clients/{name}/brand-guide.md` (브랜드 제약)
-→ `docs/lmf-learnings.md` (누적 인사이트)
+→ `docs/clients/{name}/accounts/{account}/lmf-learnings.md` (누적 인사이트)
 → `docs/taxonomy-reference.md` (MKT목표·CPG목표 코드표)

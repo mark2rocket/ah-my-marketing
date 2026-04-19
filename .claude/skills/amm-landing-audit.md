@@ -23,10 +23,11 @@
 스킬 실행 전 **AskUserQuestion 툴**로 아래를 순서대로 질문한다:
 
 1. "어떤 클라이언트의 랜딩페이지를 감사할까요? (클라이언트명)"
-2. "랜딩페이지 URL 또는 텍스트를 제공해주세요."
-3. "연결된 광고의 카피(헤드라인·본문)를 알려주세요. (여러 개면 모두 제공)"
-4. "현재 성과 문제가 있나요? (예: CTR 높은데 전환율 낮음 / 이탈률 높음 / 특정 VP만 전환 안 됨)"
-5. "Primary Metric은 무엇인가요? (CPI / CPA / 회원가입 / 문의 등)"
+2. "광고 계정명을 알려주세요. (예: main / kr-performance / default)"
+3. "랜딩페이지 URL 또는 텍스트를 제공해주세요."
+4. "연결된 광고의 카피(헤드라인·본문)를 알려주세요. (여러 개면 모두 제공)"
+5. "현재 성과 문제가 있나요? (예: CTR 높은데 전환율 낮음 / 이탈률 높음 / 특정 VP만 전환 안 됨)"
+6. "Primary Metric은 무엇인가요? (CPI / CPA / 회원가입 / 문의 등)"
 
 답변 확인 후 → Phase 0으로 진행.
 
@@ -35,10 +36,10 @@
 ### Phase 0 — 선행 산출물 자동 로드
 
 ```
-1. docs/clients/{name}/taxonomy.md 읽기 (있으면)
+1. docs/clients/{name}/accounts/{account}/taxonomy.md 읽기 (있으면)
    → VP·USP 코드 로드 → 메시지 매핑 테이블에서 코드 기준으로 분류
 
-2. output/{name}/analysis/ 폴더 날짜순 최신 analysis.md 자동 발견
+2. output/{name}/{account}/analysis/ 폴더 날짜순 최신 analysis.md 자동 발견
    → 찾으면: VP별 CTR·CPA 성과 로드 → "성과 데이터 기반 감사 모드" 진행
      ("CTR은 높은데 CPA 높음 → 랜딩 미스매치" 패턴 우선 진단)
    → 없으면: "성과 데이터 없음. 메시지 일관성만으로 감사합니다."
@@ -111,7 +112,7 @@
 ## 산출물
 
 ```
-output/{name}/research/{YYMMDD}-landing-audit/
+output/{name}/{account}/research/{YYMMDD}-landing-audit/
 ├── message-map.md      — 광고↔랜딩 메시지 매핑표
 ├── audit-report.md     — 미스매치 진단 + 개선 우선순위
 └── ab-hypotheses.md    — A/B 테스트 가설 3개
@@ -124,7 +125,7 @@ output/{name}/research/{YYMMDD}-landing-audit/
 
 ## 참고
 
-→ `docs/clients/{name}/taxonomy.md` (VP·USP 코드)
-→ `output/{name}/analysis/` (광고 성과 데이터)
+→ `docs/clients/{name}/accounts/{account}/taxonomy.md` (VP·USP 코드)
+→ `output/{name}/{account}/analysis/` (광고 성과 데이터)
 → `.claude/rules/creative-design.md` (카피 정제 기준)
 → `.claude/rules/meta-ads.md` (LMF 카피 방향)

@@ -20,9 +20,10 @@
 스킬 실행 전 **AskUserQuestion 툴**로 아래를 순서대로 질문한다:
 
 1. "어떤 클라이언트의 택소노미를 정의할까요? (클라이언트명 또는 프로젝트명)"
-2. "기존 광고명 샘플이 있나요? 있다면 붙여넣어 주세요. (없으면 신규 정의로 진행합니다)"
+2. "광고 계정명을 알려주세요. (예: main / kr-performance / default)"
+3. "기존 광고명 샘플이 있나요? 있다면 붙여넣어 주세요. (없으면 신규 정의로 진행합니다)"
 
-답변 확인 후 → `docs/clients/{name}/` 폴더 존재 여부를 자동 확인하고 Phase 1로 진행.
+답변 확인 후 → `docs/clients/{name}/accounts/{account}/` 폴더 존재 여부를 자동 확인하고 Phase 1로 진행.
 
 ## 실행 흐름
 
@@ -51,7 +52,7 @@
 
 ### Phase 3 — 택소노미 문서 생성
 
-`docs/clients/{name}/taxonomy.md` 생성 또는 업데이트:
+`docs/clients/{name}/accounts/{account}/taxonomy.md` 생성 또는 업데이트:
 
 ```markdown
 # {클라이언트명} 택소노미
@@ -82,7 +83,7 @@
 
 ### Phase 4 — taxonomy-log.csv 초기화
 
-`docs/clients/{name}/taxonomy-log.csv` 생성:
+`docs/clients/{name}/accounts/{account}/taxonomy-log.csv` 생성:
 - `docs/clients/_template/taxonomy-log.csv` 복사
 - 헤더 유지, 샘플 행 삭제 후 실제 광고명 기록 시작
 
@@ -95,8 +96,8 @@
 
 ## 산출물
 
-- `docs/clients/{name}/taxonomy.md` (생성/업데이트)
-- `docs/clients/{name}/taxonomy-log.csv` (초기화 또는 업데이트)
+- `docs/clients/{name}/accounts/{account}/taxonomy.md` (생성/업데이트)
+- `docs/clients/{name}/accounts/{account}/taxonomy-log.csv` (초기화 또는 업데이트)
 - 검증 리포트 (인라인 출력)
 
 ## 다음 단계

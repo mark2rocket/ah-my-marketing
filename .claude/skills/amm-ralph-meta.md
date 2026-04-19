@@ -20,7 +20,8 @@ Paid Track 7단계를 처음부터 끝까지 순서대로 실행하는 오케스
 스킬 실행 전 **AskUserQuestion 툴**로 아래를 순서대로 질문한다:
 
 1. "어떤 클라이언트의 풀 파이프라인을 실행할까요? (클라이언트명)"
-2. "몇 단계부터 시작할까요? (1~7 선택, 또는 '처음부터')"
+2. "광고 계정명을 알려주세요. (예: main / kr-performance / default)"
+3. "몇 단계부터 시작할까요? (1~7 선택, 또는 '처음부터')"
    ```
    1. /amm-campaign-plan  — 캠페인 기획
    2. /amm-copy-lmf       — LMF 소구점·카피 발굴
@@ -30,7 +31,7 @@ Paid Track 7단계를 처음부터 끝까지 순서대로 실행하는 오케스
    6. /amm-ad-optimize    — 집행 중 최적화
    7. /amm-ad-analysis    — 결과 분석
    ```
-3. "건너뛸 단계가 있나요? (없으면 '없음')"
+4. "건너뛸 단계가 있나요? (없으면 '없음')"
 
 답변 확인 후 → 지정된 단계부터 순서대로 실행.
 
@@ -42,7 +43,7 @@ Paid Track 7단계를 처음부터 끝까지 순서대로 실행하는 오케스
 
 ```
 실행: .claude/skills/amm-campaign-plan.md 전체 흐름 수행
-산출물: output/{name}/plan/{YYMMDD}-campaign-plan/campaign-plan.md
+산출물: output/{name}/{account}/plan/{YYMMDD}-campaign-plan/campaign-plan.md
 ```
 
 **체크포인트:** 캠페인 브리프·KPI·스프린트 계획이 산출물로 저장되었는가?
@@ -54,9 +55,9 @@ Paid Track 7단계를 처음부터 끝까지 순서대로 실행하는 오케스
 
 ```
 실행: .claude/skills/amm-copy-lmf.md 전체 흐름 수행
-입력: output/{name}/plan/ 폴더 날짜순 최신 campaign-plan.md 자동 로드
+입력: output/{name}/{account}/plan/ 폴더 날짜순 최신 campaign-plan.md 자동 로드
       → MKT목표·KPI·타겟 페르소나·스프린트 기획을 Phase 0에 전달
-산출물: output/{name}/copy/{YYMMDD}-lmf/
+산출물: output/{name}/{account}/copy/{YYMMDD}-lmf/
          ├── lmf-brief.md
          ├── copy-candidates.md
          ├── ice-priority.md
@@ -73,8 +74,8 @@ Paid Track 7단계를 처음부터 끝까지 순서대로 실행하는 오케스
 ```
 실행: .claude/skills/amm-taxonomy.md 전체 흐름 수행
 입력: STEP 2의 VP·USP 코드 자동 로드
-산출물: docs/clients/{name}/taxonomy.md
-        docs/clients/{name}/taxonomy-log.csv
+산출물: docs/clients/{name}/accounts/{account}/taxonomy.md
+        docs/clients/{name}/accounts/{account}/taxonomy-log.csv
 ```
 
 **체크포인트:** 3레벨 네이밍 구조 정의 + taxonomy-log.csv 초기화?
@@ -87,7 +88,7 @@ Paid Track 7단계를 처음부터 끝까지 순서대로 실행하는 오케스
 ```
 실행: .claude/skills/amm-ad-creative.md 전체 흐름 수행
 입력: STEP 2 copy-final.md + STEP 3 taxonomy.md 자동 로드
-산출물: output/{name}/creative/{YYMMDD}-{VP코드}/
+산출물: output/{name}/{account}/creative/{YYMMDD}-{VP코드}/
          ├── *.html
          └── *.png
 ```
@@ -102,7 +103,7 @@ Paid Track 7단계를 처음부터 끝까지 순서대로 실행하는 오케스
 ```
 실행: .claude/skills/amm-meta-setup.md 전체 흐름 수행
 입력: STEP 3 taxonomy.md + STEP 4 소재 파일명 자동 로드
-산출물: output/{name}/setup/{YYMMDD}-meta-setup/meta-setup.md
+산출물: output/{name}/{account}/setup/{YYMMDD}-meta-setup/meta-setup.md
 ```
 
 **체크포인트:** 캠페인→광고세트→광고 전체 명세서 완성?
@@ -115,7 +116,7 @@ Paid Track 7단계를 처음부터 끝까지 순서대로 실행하는 오케스
 ```
 실행: .claude/skills/amm-ad-optimize.md 전체 흐름 수행
 입력: STEP 5 세팅 명세서 + 실시간 성과 데이터 (사용자 제공)
-산출물: output/{name}/optimize/{YYMMDD}-optimize/optimize-plan.md
+산출물: output/{name}/{account}/optimize/{YYMMDD}-optimize/optimize-plan.md
 ```
 
 > 집행 기간 중 복수 실행 가능. 최적화 회차마다 폴더 날짜가 달라진다.
@@ -130,9 +131,9 @@ Paid Track 7단계를 처음부터 끝까지 순서대로 실행하는 오케스
 ```
 실행: .claude/skills/amm-ad-analysis.md 전체 흐름 수행
 입력: 전체 캠페인 성과 데이터 (사용자 제공)
-산출물: output/{name}/analysis/{YYMMDD}-analysis/analysis.md
-        docs/clients/{name}/campaign-log.md (append)
-        docs/lmf-learnings.md (append)
+산출물: output/{name}/{account}/analysis/{YYMMDD}-analysis/analysis.md
+        docs/clients/{name}/accounts/{account}/campaign-log.md (append)
+        docs/clients/{name}/accounts/{account}/lmf-learnings.md (append)
 ```
 
 **체크포인트:** GATE-6 통과 (lmf-learnings.md + campaign-log.md 업데이트)?

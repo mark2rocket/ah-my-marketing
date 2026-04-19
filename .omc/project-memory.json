@@ -1,0 +1,182 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1776535379416,
+  "projectRoot": "/Users/kimsaeam/obsidian/haven-vault/40-ClaudeCode/harness-ah-my-marketing",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "docs"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "docs": {
+      "path": "docs",
+      "purpose": "Documentation",
+      "fileCount": 3,
+      "lastAccessed": 1776535379407,
+      "keyFiles": [
+        "harness-review-log.md",
+        "lmf-learnings.md",
+        "taxonomy-reference.md"
+      ]
+    },
+    "output": {
+      "path": "output",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1776535379407,
+      "keyFiles": []
+    }
+  },
+  "hotPaths": [
+    {
+      "path": ".claude/skills/amm-ad-analysis.md",
+      "accessCount": 9,
+      "lastAccessed": 1776577804197,
+      "type": "file"
+    },
+    {
+      "path": ".claude/hooks.md",
+      "accessCount": 9,
+      "lastAccessed": 1776578007269,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/amm-ad-optimize.md",
+      "accessCount": 9,
+      "lastAccessed": 1776578010876,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/amm-meta-setup.md",
+      "accessCount": 9,
+      "lastAccessed": 1776578023752,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/amm-copy-lmf.md",
+      "accessCount": 8,
+      "lastAccessed": 1776577635099,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/amm-ad-creative.md",
+      "accessCount": 8,
+      "lastAccessed": 1776578009086,
+      "type": "file"
+    },
+    {
+      "path": "CLAUDE.md",
+      "accessCount": 7,
+      "lastAccessed": 1776577500618,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/amm-user-interview.md",
+      "accessCount": 7,
+      "lastAccessed": 1776577884286,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/amm-competitor-scan.md",
+      "accessCount": 7,
+      "lastAccessed": 1776577939360,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/amm-landing-audit.md",
+      "accessCount": 7,
+      "lastAccessed": 1776577946603,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/amm-ralph-meta.md",
+      "accessCount": 7,
+      "lastAccessed": 1776577991582,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/amm-taxonomy.md",
+      "accessCount": 6,
+      "lastAccessed": 1776577657323,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/amm-campaign-plan.md",
+      "accessCount": 5,
+      "lastAccessed": 1776577587956,
+      "type": "file"
+    },
+    {
+      "path": "README.md",
+      "accessCount": 4,
+      "lastAccessed": 1776576425781,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/amm-blog.md",
+      "accessCount": 4,
+      "lastAccessed": 1776577852057,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/amm-hook-lab.md",
+      "accessCount": 4,
+      "lastAccessed": 1776577925718,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/amm-harness-review.md",
+      "accessCount": 4,
+      "lastAccessed": 1776578022452,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/amm-cardnews.md",
+      "accessCount": 3,
+      "lastAccessed": 1776577834420,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/amm-reels.md",
+      "accessCount": 3,
+      "lastAccessed": 1776577838016,
+      "type": "file"
+    },
+    {
+      "path": "",
+      "accessCount": 3,
+      "lastAccessed": 1776578017659,
+      "type": "directory"
+    },
+    {
+      "path": ".claude",
+      "accessCount": 1,
+      "lastAccessed": 1776578028823,
+      "type": "directory"
+    }
+  ],
+  "userDirectives": []
+}

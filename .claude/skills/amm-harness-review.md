@@ -37,8 +37,8 @@
 - CLAUDE.md
 - .claude/hooks.md
 - .claude/skills/*.md (전체)
-- docs/lmf-learnings.md (누적 패턴 파악)
-- docs/clients/*/campaign-log.md (실제 사용 패턴)
+- docs/clients/*/accounts/*/lmf-learnings.md (누적 패턴 파악)
+- docs/clients/*/accounts/*/campaign-log.md (실제 사용 패턴)
 ```
 
 ### Phase 2 — 마찰 지점 발굴
@@ -108,5 +108,5 @@
 
 ## 참고
 
-→ `docs/lmf-learnings.md` (실제 사용 패턴 파악용)
+→ `docs/clients/{name}/accounts/{account}/lmf-learnings.md` (실제 사용 패턴 파악용)
 → `.claude/hooks.md` (게이트 유효성 검토)
