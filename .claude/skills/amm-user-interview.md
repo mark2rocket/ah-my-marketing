@@ -37,13 +37,19 @@
 ### Phase 0 — 컨텍스트 로드
 
 ```
-1. output/{name}/plan/ 최신 campaign-plan.md 읽기 (있으면)
-   → 마케팅 목표·타겟·KPI 파악
+1. output/{name}/plan/ 폴더 날짜순 최신 campaign-plan.md 자동 발견
+   → 찾으면: 마케팅 목표·타겟·KPI 파악
+   → 없으면: Sprint Contract 1~2번 답변으로 대체
 
-2. output/{name}/copy/ 최신 lmf-brief.md 읽기 (있으면)
-   → 기존 VP·소구점 가설 파악 → 인터뷰에서 검증 대상으로 활용
+2. output/{name}/copy/ 폴더에서 3단계 폴백으로 VP·소구점 가설 로드:
+   a. 날짜순 최신 lmf-brief.md 탐색
+   b. 없으면 copy-final.md 탐색
+   c. 둘 다 없으면: "기존 VP 정보 없음. 인터뷰 결과로 최초 가설을 수립합니다."
 
 3. docs/clients/{name}/brand-guide.md 읽기 (있으면)
+
+4. 로드 결과 출력:
+   "campaign-plan.md: ✅/❌ / VP 가설 소스: {lmf-brief/copy-final/없음} / brand-guide.md: ✅/❌"
 ```
 
 ### Phase 1 — 시스템 역할 설정

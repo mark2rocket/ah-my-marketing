@@ -37,14 +37,19 @@
 ### Phase 0 — 맥락 로드
 
 ```
-1. output/{name}/setup/ 최신 폴더 읽기 (있으면)
-   → 현재 세팅 구조·소구점 배분 파악
+1. output/{name}/setup/ 폴더에서 날짜순 최신 폴더 자동 발견
+   → 찾으면: meta-setup.md 읽기 → 캠페인 구조·소구점 배분·소재 목록 파악
+   → 없으면: "세팅 명세서 없음. 사용자 입력 기반으로 진행."
 
 2. docs/clients/{name}/campaign-log.md 읽기 (있으면)
    → 이전 최적화 이력 · 반복 문제 패턴
+   → 없으면: 이번 회차가 첫 최적화 기록
 
-3. docs/clients/{name}/taxonomy.md 읽기
+3. docs/clients/{name}/taxonomy.md 읽기 (있으면)
    → VP 코드 · USP 매핑
+
+4. 자동 로드 결과 출력:
+   "meta-setup.md: ✅/❌ / campaign-log.md: ✅/❌ / taxonomy.md: ✅/❌"
 ```
 
 ### Phase 1 — 현황 진단
