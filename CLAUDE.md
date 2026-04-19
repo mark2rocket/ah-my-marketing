@@ -86,7 +86,9 @@ output/{name}/{account}/
 | Research | — | `/amm-competitor-scan` | 경쟁사 광고·메시지 분석 + 차별화 기회 발굴 | 가능 |
 | Research | — | `/amm-hook-lab` | 훅 문구 대량 발산 + ICE 채점 Top 10 선별 | 가능 |
 | Research | — | `/amm-landing-audit` | 광고↔랜딩 메시지 일관성 LMF 감사 | 가능 |
+| Meta | — | `/amm-setup` | 하네스 최초 설치 설정 (API 토큰·이메일·기본 가드레일) | 가능 |
 | Meta | — | `/amm-brand-setup` | 브랜드·제품 정보 셋업 (GATE-0 선행 작업) | 가능 |
+| Meta | — | `/amm-guardrail-setup` | 캠페인별 가드레일 메트릭·임계값 설정 | 가능 |
 | Meta | — | `/amm-strategy-panel` | 마케팅 전문가 6인 근거 기반 전략 검토 패널 | 가능 |
 | Meta | — | `/amm-harness-review` | 하네스 자기 검토·개선 | 가능 |
 

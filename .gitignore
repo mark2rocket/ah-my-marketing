@@ -1,0 +1,10 @@
+# 개인 설정 (Access Token 포함 — 절대 커밋 금지)
+.amm/config.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 에디터
+.vscode/
+.idea/

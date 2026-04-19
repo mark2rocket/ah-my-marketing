@@ -1,0 +1,18 @@
+{
+  "_comment": "이 파일을 복사하여 config.json으로 사용. config.json은 .gitignore로 보호됨.",
+  "user": "",
+  "meta": {
+    "access_token": "YOUR_META_ACCESS_TOKEN",
+    "ad_account_id": "act_YOUR_AD_ACCOUNT_ID"
+  },
+  "notifications": {
+    "email": "your@email.com",
+    "gmail_mcp_connected": false
+  },
+  "default_guardrails": {
+    "cpa_limit": 15000,
+    "ctr_min": 0.5,
+    "roas_min": 2.0
+  },
+  "setup_completed_at": ""
+}
