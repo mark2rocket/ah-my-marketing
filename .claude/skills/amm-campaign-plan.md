@@ -39,6 +39,13 @@ LMF 캠페인 실행 전 전체 마케팅 전략을 수립한다.
 ### Phase 0 — 이전 인사이트 로드
 
 ```
+0. (GATE-0) docs/clients/{name}/brand-guide.md 읽기
+   → 없으면: "/amm-brand-setup을 먼저 실행해주세요." → 중단
+   → 제품 1개: 자동 선택, 이후 전체 진행에서 이 제품 정보 사용
+   → 제품 2~3개: AskUserQuestion으로 선택 요청
+     "이번에 광고할 제품/서비스를 선택해주세요: P01 {제품명} / P02 {제품명}"
+   → 제품 4개 이상: products/ 폴더 목록 출력 → AskUserQuestion으로 선택 → P{N}.md 로드
+
 1. docs/clients/{name}/accounts/{account}/lmf-learnings.md 읽기 (있으면)
    → 이전 winner 소구점, 반복 실패 패턴 파악
 

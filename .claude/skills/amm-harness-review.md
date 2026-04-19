@@ -30,6 +30,17 @@
 
 ## 실행 흐름
 
+### Phase 0 — 브랜드·제품 로드 (GATE-0)
+
+```
+0. (GATE-0) docs/clients/{name}/brand-guide.md 읽기
+   → 없으면: "/amm-brand-setup을 먼저 실행해주세요." → brand-guide.md 부재를 검토 대상 이슈로 기록하고 계속 진행
+   → 제품 1개: 자동 선택, 이후 전체 진행에서 이 제품 정보 사용
+   → 제품 2~3개: AskUserQuestion으로 선택 요청
+     "이번에 광고할 제품/서비스를 선택해주세요: P01 {제품명} / P02 {제품명}"
+   → 제품 4개 이상: products/ 폴더 목록 출력 → AskUserQuestion으로 선택 → P{N}.md 로드
+```
+
 ### Phase 1 — 하네스 현황 스캔
 
 ```

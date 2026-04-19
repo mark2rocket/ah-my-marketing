@@ -52,81 +52,117 @@
   },
   "hotPaths": [
     {
-      "path": ".claude/skills/amm-ad-analysis.md",
-      "accessCount": 9,
-      "lastAccessed": 1776577804197,
-      "type": "file"
-    },
-    {
       "path": ".claude/hooks.md",
-      "accessCount": 9,
-      "lastAccessed": 1776578007269,
-      "type": "file"
-    },
-    {
-      "path": ".claude/skills/amm-ad-optimize.md",
-      "accessCount": 9,
-      "lastAccessed": 1776578010876,
-      "type": "file"
-    },
-    {
-      "path": ".claude/skills/amm-meta-setup.md",
-      "accessCount": 9,
-      "lastAccessed": 1776578023752,
-      "type": "file"
-    },
-    {
-      "path": ".claude/skills/amm-copy-lmf.md",
-      "accessCount": 8,
-      "lastAccessed": 1776577635099,
-      "type": "file"
-    },
-    {
-      "path": ".claude/skills/amm-ad-creative.md",
-      "accessCount": 8,
-      "lastAccessed": 1776578009086,
+      "accessCount": 14,
+      "lastAccessed": 1776578658176,
       "type": "file"
     },
     {
       "path": "CLAUDE.md",
-      "accessCount": 7,
-      "lastAccessed": 1776577500618,
+      "accessCount": 11,
+      "lastAccessed": 1776578517389,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/amm-meta-setup.md",
+      "accessCount": 11,
+      "lastAccessed": 1776578553075,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/amm-ad-optimize.md",
+      "accessCount": 11,
+      "lastAccessed": 1776578558838,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/amm-ad-analysis.md",
+      "accessCount": 11,
+      "lastAccessed": 1776578565504,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/amm-copy-lmf.md",
+      "accessCount": 10,
+      "lastAccessed": 1776578536552,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/amm-ad-creative.md",
+      "accessCount": 10,
+      "lastAccessed": 1776578542288,
       "type": "file"
     },
     {
       "path": ".claude/skills/amm-user-interview.md",
-      "accessCount": 7,
-      "lastAccessed": 1776577884286,
+      "accessCount": 9,
+      "lastAccessed": 1776578571691,
       "type": "file"
     },
     {
       "path": ".claude/skills/amm-competitor-scan.md",
-      "accessCount": 7,
-      "lastAccessed": 1776577939360,
+      "accessCount": 9,
+      "lastAccessed": 1776578576950,
       "type": "file"
     },
     {
       "path": ".claude/skills/amm-landing-audit.md",
-      "accessCount": 7,
-      "lastAccessed": 1776577946603,
+      "accessCount": 9,
+      "lastAccessed": 1776578581939,
       "type": "file"
     },
     {
       "path": ".claude/skills/amm-ralph-meta.md",
-      "accessCount": 7,
-      "lastAccessed": 1776577991582,
+      "accessCount": 9,
+      "lastAccessed": 1776578623562,
       "type": "file"
     },
     {
       "path": ".claude/skills/amm-taxonomy.md",
-      "accessCount": 6,
-      "lastAccessed": 1776577657323,
+      "accessCount": 8,
+      "lastAccessed": 1776578588690,
       "type": "file"
     },
     {
       "path": ".claude/skills/amm-campaign-plan.md",
+      "accessCount": 7,
+      "lastAccessed": 1776578530299,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/amm-blog.md",
+      "accessCount": 7,
+      "lastAccessed": 1776578611140,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/amm-hook-lab.md",
+      "accessCount": 6,
+      "lastAccessed": 1776578616487,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/amm-harness-review.md",
+      "accessCount": 6,
+      "lastAccessed": 1776578630331,
+      "type": "file"
+    },
+    {
+      "path": "",
       "accessCount": 5,
-      "lastAccessed": 1776577587956,
+      "lastAccessed": 1776578306352,
+      "type": "directory"
+    },
+    {
+      "path": ".claude/skills/amm-cardnews.md",
+      "accessCount": 5,
+      "lastAccessed": 1776578593980,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/amm-reels.md",
+      "accessCount": 5,
+      "lastAccessed": 1776578599661,
       "type": "file"
     },
     {
@@ -136,45 +172,33 @@
       "type": "file"
     },
     {
-      "path": ".claude/skills/amm-blog.md",
-      "accessCount": 4,
-      "lastAccessed": 1776577852057,
-      "type": "file"
-    },
-    {
-      "path": ".claude/skills/amm-hook-lab.md",
-      "accessCount": 4,
-      "lastAccessed": 1776577925718,
-      "type": "file"
-    },
-    {
-      "path": ".claude/skills/amm-harness-review.md",
-      "accessCount": 4,
-      "lastAccessed": 1776578022452,
-      "type": "file"
-    },
-    {
-      "path": ".claude/skills/amm-cardnews.md",
+      "path": "docs/clients/_template/brand-guide.md",
       "accessCount": 3,
-      "lastAccessed": 1776577834420,
+      "lastAccessed": 1776578459771,
       "type": "file"
-    },
-    {
-      "path": ".claude/skills/amm-reels.md",
-      "accessCount": 3,
-      "lastAccessed": 1776577838016,
-      "type": "file"
-    },
-    {
-      "path": "",
-      "accessCount": 3,
-      "lastAccessed": 1776578017659,
-      "type": "directory"
     },
     {
       "path": ".claude",
       "accessCount": 1,
       "lastAccessed": 1776578028823,
+      "type": "directory"
+    },
+    {
+      "path": "docs/clients/_template/products/product-template.md",
+      "accessCount": 1,
+      "lastAccessed": 1776578468539,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/amm-brand-setup.md",
+      "accessCount": 1,
+      "lastAccessed": 1776578491678,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills",
+      "accessCount": 1,
+      "lastAccessed": 1776578659078,
       "type": "directory"
     }
   ],

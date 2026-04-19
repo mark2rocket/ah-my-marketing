@@ -86,6 +86,7 @@ output/{name}/{account}/
 | Research | — | `/amm-competitor-scan` | 경쟁사 광고·메시지 분석 + 차별화 기회 발굴 | 가능 |
 | Research | — | `/amm-hook-lab` | 훅 문구 대량 발산 + ICE 채점 Top 10 선별 | 가능 |
 | Research | — | `/amm-landing-audit` | 광고↔랜딩 메시지 일관성 LMF 감사 | 가능 |
+| Meta | — | `/amm-brand-setup` | 브랜드·제품 정보 셋업 (GATE-0 선행 작업) | 가능 |
 | Meta | — | `/amm-harness-review` | 하네스 자기 검토·개선 | 가능 |
 
 ---
@@ -110,7 +111,7 @@ output/{name}/{account}/
 CLAUDE.md (지금 여기)
   → .claude/skills/{스킬명}.md                                    # 스킬 실행 시
   → .claude/hooks.md                                              # 게이트 확인 시
-  → docs/clients/{name}/brand-guide.md                           # 브랜드 공통 정보 확인 시
+  → docs/clients/{name}/brand-guide.md                           # 브랜드·제품 정보 확인 시 (GATE-0)
   → docs/clients/{name}/accounts/{account}/taxonomy.md           # 택소노미 확인 시
   → docs/clients/{name}/accounts/{account}/campaign-log.md       # 이전 실험 결과 시
   → docs/clients/{name}/accounts/{account}/lmf-learnings.md     # 계정별 LMF 누적 인사이트

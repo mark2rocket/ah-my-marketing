@@ -39,6 +39,13 @@
 ### Phase 0 — 선행 산출물 자동 로드
 
 ```
+0. (GATE-0) docs/clients/{name}/brand-guide.md 읽기
+   → 없으면: "/amm-brand-setup을 먼저 실행해주세요." → 중단
+   → 제품 1개: 자동 선택, 이후 전체 진행에서 이 제품 정보 사용
+   → 제품 2~3개: AskUserQuestion으로 선택 요청
+     "이번에 광고할 제품/서비스를 선택해주세요: P01 {제품명} / P02 {제품명}"
+   → 제품 4개 이상: products/ 폴더 목록 출력 → AskUserQuestion으로 선택 → P{N}.md 로드
+
 1. docs/clients/{name}/accounts/{account}/taxonomy.md 읽기 (GATE-2 통과 전제)
    → VP 코드 + 소구점 정의 + 네이밍 컨벤션 로드
 

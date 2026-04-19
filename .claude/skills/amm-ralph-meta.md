@@ -37,6 +37,18 @@ Paid Track 7단계를 처음부터 끝까지 순서대로 실행하는 오케스
 
 ## 실행 흐름
 
+### Phase 0 — 브랜드·제품 로드 (GATE-0)
+
+```
+0. (GATE-0) docs/clients/{name}/brand-guide.md 읽기
+   → 없으면: "/amm-brand-setup을 먼저 실행해주세요." → 중단
+   → 제품 1개: 자동 선택, 이후 전체 STEP에서 이 제품 정보 사용
+   → 제품 2~3개: AskUserQuestion으로 선택 요청
+   → 제품 4개 이상: products/ 폴더 목록 출력 → AskUserQuestion으로 선택 → P{N}.md 로드
+```
+
+GATE-0 통과 후 → STEP 1부터 순서대로 실행.
+
 ---
 
 ### STEP 1 — /campaign-plan

@@ -38,6 +38,13 @@
 ### Phase 0 — 맥락 로드
 
 ```
+0. (GATE-0) docs/clients/{name}/brand-guide.md 읽기
+   → 없으면: "/amm-brand-setup을 먼저 실행해주세요." → 중단
+   → 제품 1개: 자동 선택, 이후 전체 진행에서 이 제품 정보 사용
+   → 제품 2~3개: AskUserQuestion으로 선택 요청
+     "이번에 광고할 제품/서비스를 선택해주세요: P01 {제품명} / P02 {제품명}"
+   → 제품 4개 이상: products/ 폴더 목록 출력 → AskUserQuestion으로 선택 → P{N}.md 로드
+
 1. output/{name}/{account}/setup/ 폴더에서 날짜순 최신 폴더 자동 발견
    → 찾으면: meta-setup.md 읽기 → 캠페인 구조·소구점 배분·소재 목록 파악
    → 없으면: "세팅 명세서 없음. 사용자 입력 기반으로 진행."
