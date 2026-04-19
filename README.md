@@ -38,12 +38,12 @@ Prepare → Diverge → Converge → Apply
 
 ```mermaid
 flowchart LR
-    A[/amm-campaign-plan\n캠페인 기획] --> B[/amm-copy-lmf\nLMF 소구점 발굴]
-    B --> C[/amm-taxonomy\n네이밍 정의]
-    C --> D[/amm-ad-creative\n소재 제작]
-    D --> E[/amm-meta-setup\n광고 세팅]
-    E --> F[/amm-ad-optimize\n집행 최적화]
-    F --> G[/amm-ad-analysis\n결과 분석]
+    A["/amm-campaign-plan<br/>캠페인 기획"] --> B["/amm-copy-lmf<br/>LMF 소구점 발굴"]
+    B --> C["/amm-taxonomy<br/>네이밍 정의"]
+    C --> D["/amm-ad-creative<br/>소재 제작"]
+    D --> E["/amm-meta-setup<br/>광고 세팅"]
+    E --> F["/amm-ad-optimize<br/>집행 최적화"]
+    F --> G["/amm-ad-analysis<br/>결과 분석"]
     G -->|Compounding| A
 
     style A fill:#4F46E5,color:#fff
@@ -59,19 +59,19 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-    CN[/amm-cardnews\n카드뉴스\nHTML→PNG]
-    RE[/amm-reels\n릴스\nHTML→MP4]
-    BL[/amm-blog\n블로그·뉴스레터\n마크다운 초안]
+    CN["/amm-cardnews<br/>카드뉴스 HTML→PNG"]
+    RE["/amm-reels<br/>릴스 HTML→MP4"]
+    BL["/amm-blog<br/>블로그·뉴스레터"]
 ```
 
 ### Research Track — 기획·리서치
 
 ```mermaid
 flowchart LR
-    UI[/amm-user-interview\n유저 인터뷰 시뮬레이션\n페르소나 3명 스폰]
-    CS[/amm-competitor-scan\n경쟁사 분석\n시장 언어 지형도]
-    HL[/amm-hook-lab\n훅 문구 발산\nICE 채점 Top 10]
-    LA[/amm-landing-audit\n랜딩페이지 감사\n광고↔랜딩 일관성]
+    UI["/amm-user-interview<br/>유저 인터뷰 시뮬레이션"]
+    CS["/amm-competitor-scan<br/>경쟁사 분석"]
+    HL["/amm-hook-lab<br/>훅 문구 발산 ICE Top 10"]
+    LA["/amm-landing-audit<br/>랜딩페이지 LMF 감사"]
 ```
 
 ---
