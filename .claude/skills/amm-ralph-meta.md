@@ -54,7 +54,8 @@ Paid Track 7단계를 처음부터 끝까지 순서대로 실행하는 오케스
 
 ```
 실행: .claude/skills/amm-copy-lmf.md 전체 흐름 수행
-입력: STEP 1 산출물 (페르소나·마케팅 목표) 자동 로드
+입력: output/{name}/plan/ 폴더 날짜순 최신 campaign-plan.md 자동 로드
+      → MKT목표·KPI·타겟 페르소나·스프린트 기획을 Phase 0에 전달
 산출물: output/{name}/copy/{YYMMDD}-lmf/
          ├── lmf-brief.md
          ├── copy-candidates.md

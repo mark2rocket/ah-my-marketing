@@ -114,22 +114,35 @@ CTR은 낮은데 CPA 낮음 → 특정 타겟에서만 작동
 - 소재 포맷 변경으로 성과 개선 여지는?
 ```
 
-### Phase 5 — Compounding 업데이트
+### Phase 5 — Compounding 업데이트 (자동 실행)
 
-아래 두 파일을 자동 업데이트:
+> **AI가 Write 툴로 직접 파일을 수정한다. 사용자 수동 작업이 아님.**
+> 파일이 없으면 신규 생성, 있으면 최하단에 append.
 
-**1. `docs/clients/{name}/campaign-log.md` 업데이트:**
+**1. `docs/clients/{name}/campaign-log.md` 자동 업데이트:**
 ```markdown
 ### [{날짜}] {캠페인명}
 Winner: VP{N} — {소구점}
 Primary Metric: {결과}
-잘 된 것 / 안 된 것 / 다음 가설
+잘 된 것: ...
+안 된 것: ...
+다음 가설: ...
 ```
 
-**2. `docs/lmf-learnings.md` 업데이트:**
+**2. `docs/lmf-learnings.md` 자동 업데이트:**
 ```markdown
 ## [{날짜}] {클라이언트명} — {캠페인명}
-winner 소구점 / 지표 / 배운 것 / 다음 가설 / 고객 언어 발굴
+- Winner 소구점: VP{N} ({소구점}) / 지표: {수치}
+- 배운 것: ...
+- 다음 가설: ...
+- 발굴된 고객 언어: "..."
+```
+
+**3. 업데이트 완료 후 확인 출력:**
+```
+✅ campaign-log.md 업데이트 완료 ({경로})
+✅ lmf-learnings.md 업데이트 완료 ({경로})
+→ GATE-6 통과. 다음 /amm-campaign-plan에서 이 데이터를 자동 로드합니다.
 ```
 
 ## 산출물
