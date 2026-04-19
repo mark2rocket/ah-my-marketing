@@ -140,12 +140,39 @@ Use Case | Persona | Problem | Alternative | Why | Frequency
 
 **GENERATOR 모드** — 이 단계에서는 평가 없이 생성만
 
+**멀티에이전트 병렬 발산 (VP 2개 이상):**
+
+VP가 2개 이상이면 각 VP를 독립 executor agent로 **동시에** 실행한다.
+VP가 1개이면 병렬 없이 직접 실행.
+
 ```
-각 소구점 가설별로:
-1. 메시지 아이데이션 (퍼소나 × VP × 소구점 × 문구)
-2. 헤드라인 5개 이상
-3. 본문 카피 3개 이상
-4. CTA 3가지 이상
+VP별 병렬 Agent 실행 (모두 동시에 발사):
+
+Task(subagent_type="oh-my-claudecode:executor", model="sonnet",
+  prompt="
+  역할: GENERATOR — 카피 발산 전용. 평가·채점 절대 금지.
+
+  VP: {VP코드} — {소구점 정의}
+  퍼소나: {퍼소나 정보 전문}
+  브랜드 톤앤매너: {brand-guide.md 내용}
+
+  Anti-Slop 기준 (반드시 적용):
+  - seamless·혁신적인·강력한·최첨단·게임체인저 등 AI 표현 전면 금지
+  - '~를 통해', '~할 수 있습니다', '~을 제공합니다' 등 공급자 언어 금지
+  - 고객 Pain Point·욕구·상황 언어만 사용
+
+  출력 (아래 형식 그대로):
+  ## VP{N} 카피 후보
+  ### 헤드라인 (5개 이상)
+  ### 본문 카피 (3개 이상)
+  ### CTA (3가지 이상)
+  ### 메시지 아이데이션 테이블
+  | 퍼소나 | VP | 소구점 | 문구 |
+  ")
+
+→ VP1 Agent / VP2 Agent / VP3 Agent 동시 실행
+→ 전체 완료 후 결과를 VP별 섹션으로 취합
+→ copy-candidates.md에 통합 저장 → GATE-4 경계
 ```
 
 메시지 아이데이션 테이블:
