@@ -1,6 +1,6 @@
-# ah-my-marketing
+# 한국의 마케터를 위한 마케팅 하네스
 
-> 김새암의 메타 광고 마케팅 하네스 — Claude Code 기반 AI-Native 마케팅 워크플로우
+> Claude Code 기반 AI-Native 마케팅 워크플로우 — 메타 광고 기획부터 분석까지
 
 LMF(Language Market Fit) 프레임워크로 고객의 언어를 찾아 광고 성과를 높이는 **15개 스킬 시스템**.  
 캠페인 기획부터 결과 분석·누적까지, 메타 광고의 전 단계를 AI 에이전트와 함께 수행합니다.
