@@ -2,7 +2,7 @@
 
 > Claude Code 기반 AI-Native 마케팅 워크플로우 — 메타 광고 기획부터 분석까지
 
-LMF(Language Market Fit) 프레임워크로 고객의 언어를 찾아 광고 성과를 높이는 **15개 스킬 시스템**.  
+LMF(Language Market Fit) 프레임워크로 고객의 언어를 찾아 광고 성과를 높이는 **18개 스킬 시스템**.  
 캠페인 기획부터 결과 분석·누적까지, 메타 광고의 전 단계를 AI 에이전트와 함께 수행합니다.
 
 ---
@@ -29,6 +29,18 @@ Prepare → Diverge → Converge → Apply
 ### Compounding 루프
 
 매 캠페인 결과가 `lmf-learnings.md`와 `campaign-log.md`에 누적 → 다음 캠페인 Phase 0에서 자동 로드 → 복리 효과.
+
+### Evidence-based ICE
+
+ICE 채점의 Confidence 항목에 **근거 레벨 태그**를 부여해 "직관"과 "검증된 전략"을 명확히 구분.
+
+| 태그 | 의미 |
+|------|------|
+| `[Strong]` | 자사 A/B 데이터 + 업계 연구 모두 뒷받침 |
+| `[Moderate]` | 자사 데이터 또는 업계 사례 중 하나 |
+| `[Emerging]` | 사용자 인터뷰·정성 데이터만 있음 |
+| `[Expert]` | 마케터 직관 기반 — 검증 전 가설로 취급 |
+| `[Contested]` | 상반된 결과 존재 — 맥락 변수 명시 필요 |
 
 ---
 
@@ -74,6 +86,16 @@ flowchart LR
     LA["/amm-landing-audit<br/>랜딩페이지 LMF 감사"]
 ```
 
+### Meta — 설정·검토
+
+```mermaid
+flowchart LR
+    BS["/amm-brand-setup<br/>브랜드·제품 셋업"]
+    SP["/amm-strategy-panel<br/>전문가 패널 전략 검토"]
+    RM["/amm-ralph-meta<br/>전체 파이프라인"]
+    HR["/amm-harness-review<br/>하네스 자기 검토"]
+```
+
 ---
 
 ## 스킬 목록
@@ -84,7 +106,7 @@ flowchart LR
 |------|------|------|------------|
 | 1 | `/amm-campaign-plan` | 캠페인 전략·KPI·스프린트 기획 | `campaign-plan.md` |
 | 1.5 | `/amm-user-interview` | 페르소나 3명 스폰 + 심층 인터뷰 | `personas.md`, `interview-log.md`, `insights.md` |
-| 2 | `/amm-copy-lmf` | LMF 4단계 소구점·카피 발굴 | `lmf-brief.md`, `copy-candidates.md`, `ice-report.md` |
+| 2 | `/amm-copy-lmf` | LMF 4단계 소구점·카피 발굴 | `lmf-brief.md`, `copy-candidates.md`, `ice-priority.md` |
 | 3 | `/amm-taxonomy` | 광고 네이밍 컨벤션 정의·검증 | `taxonomy.md` |
 | 4 | `/amm-ad-creative` | 광고 소재 HTML → PNG 제작 | `{VP코드}-v1.html`, `.png` |
 | 5 | `/amm-meta-setup` | 캠페인→광고세트→광고 세팅 명세서 | `meta-setup.md` |
@@ -112,12 +134,49 @@ flowchart LR
 
 | 스킬 | 역할 |
 |------|------|
+| `/amm-brand-setup` | 브랜드·제품 정보 최초 셋업 — 모든 스킬 GATE-0 선행 작업 |
+| `/amm-strategy-panel` | 마케팅 전문가 6인 근거 기반 전략 검토 패널 |
 | `/amm-ralph-meta` | Paid Track 7단계 전체 오케스트레이션 (순차 실행) |
 | `/amm-harness-review` | 하네스 자기 검토·개선 |
 
 ---
 
 ## 스킬 상세
+
+### `/amm-brand-setup` — 브랜드·제품 셋업 ⭐ 시작점
+
+신규 클라이언트 온보딩 시 **가장 먼저 실행**하는 스킬. 모든 스킬의 GATE-0 통과를 위한 선행 조건.
+
+```
+Sprint Contract: 브랜드명·채널·타겟·톤앤매너·컬러·제품 수 수집
+Phase 1: 제품 수에 따라 분기
+  → 제품 1~3개: brand-guide.md 통합 기재
+  → 제품 4개 이상: products/ 폴더로 분리 저장
+Phase 2: brand-guide.md 생성 (+ products/P{N}.md)
+Phase 3: 완료 확인 → /amm-taxonomy로 이동
+```
+
+### `/amm-strategy-panel` — 전문가 패널 전략 검토
+
+캠페인 기획 직전 또는 소구점 선정 전, **6명의 마케팅 전문가**가 근거 기반으로 전략을 검토한다.
+
+```
+전문가 6인 (고정 구성):
+┌─────────────────────┬─────────────────────────────────┐
+│ 소비자 심리학자     │ Why 고객은 이 메시지에 반응하는가 │
+│ 퍼포먼스 마케터     │ 실제 CTR·CPA 데이터 관점          │
+│ 행동경제학자        │ 인지 편향·의사결정 프레임          │
+│ 브랜드 전략가       │ 장기 자산 vs 단기 성과 균형        │
+│ 데이터 사이언티스트 │ 측정 가능성·실험 설계             │
+│ 비판적 실패 분석가  │ 이 전략이 실패하는 시나리오        │
+└─────────────────────┴─────────────────────────────────┘
+
+모든 주장에 근거 레벨 태그 [Strong/Moderate/Emerging/Expert/Contested] 필수
+→ Core 소구점(검증 우선) / Peripheral 소구점(탐색용) 분리
+→ 검증 가설 설계 (최소 실험 단위)
+
+--quick 모드: 학문 지도·근거 탐색 생략, 컨텍스트 수집부터 시작
+```
 
 ### `/amm-campaign-plan` — 캠페인 기획
 
@@ -145,12 +204,12 @@ Phase 3 (Converge): ICE 채점 + Top 5 선별 [Evaluator]
 Phase 4 (Apply): LMF 브리프 확정
 ```
 
-**ICE 채점 기준:**
+**ICE 채점 기준 (근거 레벨 태그 포함):**
 
 | 기준 | 설명 |
 |------|------|
-| Impact (1~10) | 타겟 페르소나 도달 범위 |
-| Confidence (1~10) | 이전 실험·인터뷰 근거 강도 |
+| Impact (1~10) | 타겟 페르소나 도달 범위 (TAM 영향력) |
+| Confidence (1~10) | 이 소구점이 효과적이라는 근거의 강도 + `[근거 레벨]` 태그 |
 | Ease (1~10) | 소재·예산 제작 용이성 |
 
 ### `/amm-hook-lab` — 훅 문구 발산
@@ -212,7 +271,7 @@ Phase 4: 차별화 VP 후보 + /amm-copy-lmf 검증 가설
 Paid Track 7단계를 순서대로 실행하는 마스터 스킬.
 
 ```
-진입 질문: 클라이언트명 / 시작 단계(1-7) / 건너뛸 단계
+진입 질문: 클라이언트명 / 계정명 / 시작 단계(1-7) / 건너뛸 단계
 각 STEP: 이전 산출물 자동 로드 → 스킬 실행 → 체크포인트 확인 → 다음 STEP
 진행 표시: ✅완료 / 🔄진행중 / ⏳대기
 ```
@@ -224,12 +283,13 @@ Paid Track 7단계를 순서대로 실행하는 마스터 스킬.
 실수를 나중에 고치지 말고, 처음부터 막는 체크포인트.
 
 ```
-GATE-1 → GATE-2 → GATE-3 → [스킬 실행] → GATE-4 → GATE-5 → GATE-6
+GATE-0 → GATE-1 → GATE-2 → GATE-3 → [스킬 실행] → GATE-4 → GATE-5 → GATE-6
 ```
 
 | 게이트 | 적용 | 체크 내용 |
 |--------|------|----------|
-| GATE-1 | 모든 스킬 | 클라이언트 폴더 존재 확인 |
+| GATE-0 | 모든 스킬 | brand-guide.md 존재 확인 → 없으면 /amm-brand-setup 유도 |
+| GATE-1 | 모든 스킬 | 클라이언트 폴더 + 광고 계정 폴더 존재 확인 |
 | GATE-2 | creative, setup, optimize, analysis | taxonomy.md + VP 코드 존재 확인 |
 | GATE-3 | ad-creative, cardnews | LMF 브리프 존재 확인 |
 | GATE-4 | copy-lmf Phase 3 진입 전 | Generator 파일 저장 확인 (Generator/Evaluator 분리) |
@@ -240,20 +300,36 @@ GATE-1 → GATE-2 → GATE-3 → [스킬 실행] → GATE-4 → GATE-5 → GATE-
 
 ## 아웃풋 폴더 구조
 
+클라이언트별·광고 계정별로 완전 분리된 구조.
+
 ```
-output/{클라이언트명}/
+docs/clients/{클라이언트명}/
+├── brand-guide.md                  ← 브랜드 공통 정보 (컬러·폰트·톤앤매너·제품 목록)
+├── products/                       ← 제품 4개 이상일 때 개별 파일 분리
+│   ├── P01.md
+│   └── P02.md
+└── accounts/{계정명}/              ← 광고 계정 단위 (main, kr-performance 등)
+    ├── taxonomy.md
+    ├── taxonomy-log.csv
+    ├── campaign-log.md             ← 캠페인 이력 누적
+    └── lmf-learnings.md           ← LMF 누적 인사이트 (Compounding)
+
+output/{클라이언트명}/{계정명}/
 ├── plan/       {YYMMDD}-campaign-plan/
-│               └── campaign-plan.md
+│               ├── campaign-plan.md
+│               └── {YYMMDD}-strategy-panel/
+│                   └── strategy-panel.md
 ├── copy/       {YYMMDD}-lmf/
 │               ├── lmf-brief.md
 │               ├── copy-candidates.md
-│               └── ice-report.md
+│               ├── ice-priority.md
+│               └── copy-final.md
 │               {YYMMDD}-hook-lab/
 │               ├── hook-candidates.md
 │               └── hook-top10.md
 ├── creative/   {YYMMDD}-{VP코드}/
-│               ├── {VP코드}-v1.html
-│               └── {VP코드}-v1.png
+│               ├── {택소노미명}_IMG1x1_v01.html
+│               └── {택소노미명}_IMG1x1_v01.png
 ├── setup/      {YYMMDD}-meta-setup/
 │               └── meta-setup.md
 ├── optimize/   {YYMMDD}-optimize/
@@ -262,14 +338,10 @@ output/{클라이언트명}/
 │               └── analysis.md
 ├── cardnews/   {YYMMDD}-{주제}/
 ├── reels/      {YYMMDD}-{VP코드}/
-│               ├── reel.html
-│               └── reel.mp4
 ├── blog/       {YYMMDD}-{slug}/
-│               ├── outline.md
-│               └── blog-draft.md
 └── research/   {YYMMDD}-user-interview/
-│               {YYMMDD}-competitor-scan/
-│               └── {YYMMDD}-landing-audit/
+                {YYMMDD}-competitor-scan/
+                {YYMMDD}-landing-audit/
 ```
 
 ---
@@ -315,9 +387,14 @@ Pass 3: 더 짧고 선명하게 (수식어 제거, 고객이 바로 이해)
 # 1. 클라이언트 템플릿 복사
 cp -r docs/clients/_template/ docs/clients/{클라이언트명}/
 
-# 2. brand-guide.md 작성
-# 3. /amm-taxonomy 실행 → taxonomy.md 생성
-# 4. Paid Track 시작
+# 2. /amm-brand-setup 실행 → brand-guide.md + 제품 정보 등록 (GATE-0 통과)
+
+# 3. 광고 계정 폴더 생성
+mkdir -p docs/clients/{클라이언트명}/accounts/{계정명}/
+
+# 4. /amm-taxonomy 실행 → taxonomy.md 생성
+
+# 5. Paid Track 시작 (/amm-campaign-plan 또는 /amm-ralph-meta)
 ```
 
 ---
@@ -328,9 +405,11 @@ cp -r docs/clients/_template/ docs/clients/{클라이언트명}/
 harness-ah-my-marketing/
 ├── CLAUDE.md                    — AI 에이전트 메인 지시서
 ├── .claude/
-│   ├── skills/                  — 16개 스킬 정의
+│   ├── skills/                  — 18개 스킬 정의
+│   │   ├── amm-brand-setup.md       ← ⭐ 신규: 브랜드·제품 셋업
+│   │   ├── amm-strategy-panel.md    ← ⭐ 신규: 전문가 패널 전략 검토
 │   │   ├── amm-campaign-plan.md
-│   │   ├── amm-copy-lmf.md
+│   │   ├── amm-copy-lmf.md          ← ICE 근거 레벨 태그 추가
 │   │   ├── amm-taxonomy.md
 │   │   ├── amm-ad-creative.md
 │   │   ├── amm-meta-setup.md
@@ -345,16 +424,17 @@ harness-ah-my-marketing/
 │   │   ├── amm-landing-audit.md
 │   │   ├── amm-ralph-meta.md
 │   │   └── amm-harness-review.md
-│   ├── hooks.md                 — GATE 1~6 체크포인트
+│   ├── hooks.md                 — GATE 0~6 체크포인트
 │   └── rules/
 │       ├── meta-ads.md          — 메타 광고 공통 규칙
 │       └── creative-design.md   — 소재 디자인 + Anti-Slop 규칙
 ├── docs/
-│   ├── clients/
-│   │   └── _template/           — 신규 클라이언트 템플릿
-│   ├── lmf-learnings.md         — 전체 LMF 누적 인사이트 (Compounding)
-│   └── taxonomy-reference.md    — 택소노미 레퍼런스
-└── output/                      — 클라이언트별 산출물
+│   └── clients/
+│       └── _template/           — 신규 클라이언트 템플릿
+│           ├── brand-guide.md   — 브랜드 + 제품 정보 템플릿
+│           └── products/
+│               └── product-template.md
+└── output/                      — 클라이언트별·계정별 산출물
 ```
 
 ---
@@ -362,16 +442,21 @@ harness-ah-my-marketing/
 ## 사용 예시
 
 ```
+# 신규 클라이언트 온보딩
+/amm-brand-setup
+→ /amm-taxonomy
+
+# 전략 검토 후 캠페인 기획
+/amm-strategy-panel
+→ /amm-campaign-plan
+→ /amm-copy-lmf
+
 # 새 캠페인 전체 실행
 /amm-ralph-meta
 
-# 특정 단계만 실행
-/amm-copy-lmf
-
 # 경쟁사 분석 후 훅 발산
 /amm-competitor-scan
-→ (결과 확인 후)
-/amm-hook-lab
+→ /amm-hook-lab
 
 # 랜딩페이지 전환율 문제 진단
 /amm-landing-audit
